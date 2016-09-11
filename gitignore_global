@@ -1,0 +1,14 @@
+*~
+*.swp
+\#*\#
+.\#*
+/elpa/
+eshell/history
+ido.last
+eshell/lastdir
+ede-projects.el
+*.elc
+auto-save-list
+*.rel
+*.o
+*.out
