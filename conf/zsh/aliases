@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# misc
+alias szhrc="source ~/.zshrc"
+alias cnf="command-not-found"
+alias g="git"
+alias secpwgen="pwgen -Bv 16 1"
+alias dirs="dirs -v"
+alias ip4="curl --silent https://4.ifcfg.me"
+alias ip6="curl --silent https://6.ifcfg.me"
+
+# desktop
+alias ec="emacsclient -c"
+alias em="q emacs"
+alias gitka="gitk --all"
+alias grubupdate="sudo grub2-mkconfig -o /boot/grub2/grub.cfg && sudo grub2-install /dev/sda"
+alias ok="q okular"
+alias kdb="q kdbg"
+alias gw="q gwenview"
+alias kt="q kate"
+alias fx="q firefox"
+alias ch="chromium"
+alias vplay="q mpv --shuffle --loop 1 *"
+alias ssha="ssh-add ~/.ssh/id_rsa < /dev/null &"
+
+# programming
+alias gpp="g++ -Wall -Wextra -g"
+alias vlgl="valgrind --track-origins=yes --leak-check=full --show-leak-kinds=all"
+alias vlg="valgrind --track-origins=yes"
+alias gdba="gdb -q -ex run -ex bt -ex kill -ex quit --args"
+alias remake="make clean && make -j4"
+alias gppp="g++ -O2 -g -fno-omit-frame-pointer -DNDEBUG -fno-inline-functions -fno-inline-functions-called-once -fno-optimize-sibling-calls"
+alias sdkman-install="curl --silent "https://get.sdkman.io" | bash"
+alias sdkman-source="source ~/.sdkman/bin/sdkman-init.sh"
+
+# server
+alias www="sudo -u www-data"
+alias agu="sudo apt update && sudo aptitude safe-upgrade && sudo checkrestart"
+alias aguu="sudo apt update && sudo apt full-upgrade && sudo checkrestart"
+alias occtl="sudo -u www-data php /var/www/owncloud/occ"
+alias ncctl="sudo -u www-data php /var/www/nextcloud/occ"

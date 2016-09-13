@@ -1,54 +1,12 @@
 #!/bin/bash
 
 source ~/.dotfiles/dl/zshrc_grml
+source ~/.zsh/aliases
 
-alias agu="sudo apt update && sudo aptitude safe-upgrade && sudo checkrestart"
-alias aguu="sudo apt update && sudo apt full-upgrade && sudo checkrestart"
-alias cnf="command-not-found"
-alias ec="emacsclient -c"
-alias em="q emacs"
-alias g="git"
-alias gitka="gitk --all"
-alias grubupdate="sudo grub2-mkconfig -o /boot/grub2/grub.cfg && sudo grub2-install /dev/sda"
-alias secpwgen="pwgen -Bv 16 1"
-alias ok="q okular"
-alias kdb="q kdbg"
-alias gw="q gwenview"
-alias kt="q kate"
-alias fx="q firefox"
-alias ch="chromium"
-alias vplay="q mpv --shuffle --loop 1 *"
-alias www="sudo -u www-data"
-alias ssha="ssh-add ~/.ssh/id_rsa < /dev/null &"
-
-### Programmierung
-#
-alias gpp="g++ -Wall -Wextra -g"
-alias vlgl="valgrind --track-origins=yes --leak-check=full --show-leak-kinds=all"
-alias vlg="valgrind --track-origins=yes"
-alias gdba="gdb -q -ex run -ex bt -ex kill -ex quit --args"
-alias remake="make clean && make -j4"
-alias gppp="g++ -O2 -g -fno-omit-frame-pointer -DNDEBUG -fno-inline-functions -fno-inline-functions-called-once -fno-optimize-sibling-calls"
-#
-###
-
-### Server
-#
-alias occtl="sudo -u www-data php /var/www/owncloud/occ"
-alias ncctl="sudo -u www-data php /var/www/nextcloud/occ"
-#
-###
-
-### Shell-Funktionen
-#
+# Shell-Funktionen
 for func in ~/.zsh/functions/*; do
-	source "$func"
+    source "$func"
 done
-#
-###
-
-alias szhrc="source ~/.zshrc"
-alias dirs="dirs -v"
 
 export PATH="$HOME/.dotfiles/bin:$PATH"
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh

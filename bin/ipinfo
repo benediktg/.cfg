@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf "%s\n" "$(curl --silent ipinfo.io/"$1")"
