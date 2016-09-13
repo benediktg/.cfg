@@ -1,0 +1,119 @@
+[user]
+    name = Benedikt Geißler
+    email = benedikt@g5r.eu
+    signingkey = 8A46815E3386097F
+
+[push]
+    default = simple
+
+[pull]
+    ff = only
+
+[credential]
+    helper = cache --timeout=7200
+
+[core]
+    excludesfile = ~/.gitignore_global
+
+[color]
+    ui = auto
+
+[diff]
+    guitool = kompare
+
+[pack]
+    threads = 2
+    windowMemory = 1073741824
+    depth = 250
+    window = 250
+
+[url "git://anongit.kde.org/"]
+    insteadOf = kde:
+
+[url "git@git.kde.org:"]
+    pushInsteadOf = kde:
+
+[url "https://gitlab.com/"]
+    insteadOf = gl:
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[alias]
+    ai = add --interactive
+    ap = add --patch
+    b = branch
+    ca = commit --all
+    cf = config
+    cg = config --global
+    cob = checkout -b
+    co = checkout
+    cp = cherry-pick
+    currentbranch = rev-parse --abbrev-ref HEAD
+    cva = commit --verbose --all
+    cv = commit --verbose
+    dc = diff --cached
+    d = diff
+    dh = diff HEAD~ HEAD
+    dp = diff --patch --patience
+    em = config --global user.email
+    eml = config user.email
+    f = fetch --tags --prune
+	fa = fetch --all --tags --prune
+    ka = !gitk --all
+    k = !gitk
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    l = log
+    logn = !git lg | head -n
+    lp = log --patch
+    ma = merge --abort
+    master = checkout master
+    m = merge --no-ff
+    mt = mergetool
+    mtt = mergetool --tool
+    nm = config --global user.name
+    nml = config user.name
+    pf = push --force-with-lease
+    pl = pull --rebase
+    pso = push origin :
+    ps = push
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbo = rebase --onto=master
+    rb = rebase
+    rbs = rebase --skip
+    reha = reset --hard
+    r = remote
+    rv = remote --verbose
+    sb = show-branch
+    sh = stash
+    s = show
+    st = status
+    ta = !tig --all
+    t = !tig
+    ui = gui
+    undo = "!f() { \\\n    git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \\\n}; f"
+    up = !git fetch && git rebase origin/master
+
+[gui]
+    fontui = -family Oxygen-Sans -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+    spellingdictionary = en
+    tabsize = 4
+    fontdiff = -family Hack -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+
+[merge]
+    tool = kdiff3
+
+[mergetool]
+    keepBackup = false
+
+[grep]
+    lineNumber = true
+
+[advice]
+    detachedHead = false
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+    path = ~/.gitconfig_local

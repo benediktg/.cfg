@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.dotfiles/dl/zshrc_grml
+
 alias agu="sudo apt update && sudo aptitude safe-upgrade && sudo checkrestart"
 alias aguu="sudo apt update && sudo apt full-upgrade && sudo checkrestart"
 alias cnf="command-not-found"
@@ -48,7 +50,6 @@ done
 alias szhrc="source ~/.zshrc"
 alias dirs="dirs -v"
 
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$PATH"
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
-source ~/.transfer.sh
-source ~/.zsh-hl/zsh-syntax-highlighting.zsh
+source ~/.zsh/highlighting/zsh-syntax-highlighting.zsh

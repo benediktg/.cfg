@@ -1,0 +1,26 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean:
+    ['~', '~/.gnupg']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.emacs.d: conf/emacs.d
+    ~/.gitconfig: conf/gitconfig
+    ~/.gitignore_global: conf/gitignore_global
+    ~/.gnupg/gpg.conf: conf/gpg.conf
+    ~/.spacemacs: conf/spacemacs
+    ~/.tmux.conf: conf/tmux.conf
+    ~/.vim: conf/vim
+    ~/.vimrc: conf/vimrc
+    ~/.zsh: conf/zsh
+    ~/.zshrc: conf/zshrc
+
+- shell:
+    - git submodule update --init --recursive
+    - wget -qO ~/.dotfiles/dl/zshrc_grml http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+    - wget -qO ~/.vim/colors/solarized.vim https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
+    - wget -qO ~/.zsh/functions/transfer.sh https://gist.githubusercontent.com/nl5887/a511f172d3fb3cd0e42d/raw/transfer.sh
