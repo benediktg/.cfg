@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Usage:
+# adb-push <directory-on-computer-to-send> <directory-on-device-to-receive-it>
+# Example:
+# adb-push ~/backups/DCIM /sdcard
+
+src="${1}"
+trgt="$(basename "${1}")"
+dst="$(echo "${2}" | grep '/$')"
+# If ${dst} ends with '/', remove the trailing '/'
+if [ -n "${dst}" ]; then
+    dst="${dst%/*}"
+fi
+
+# If ${src} is a directory, make directories on device before pushing them
+if [ -d "${src}" ]; then
+    cd "${src}" || exit 1
+    cd ..
+    trgt="${trgt}/"
+    find "${trgt}" -type d -exec adb shell mkdir "${dst}/{}" \;
+fi
+
+adb push "${src}" "${dst}/${trgt}"
+
