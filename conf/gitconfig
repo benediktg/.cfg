@@ -44,6 +44,7 @@
     ap = add --patch
     b = branch
     ca = commit --all
+    cas = commit --all --gpg-sign
     cf = config
     cg = config --global
     cob = checkout -b
@@ -51,7 +52,9 @@
     cp = cherry-pick
     currentbranch = rev-parse --abbrev-ref HEAD
     cva = commit --verbose --all
+    cvas = commit --verbose --all --gpg-sign
     cv = commit --verbose
+    cvs = commit --verbose --gpg-sign
     dc = diff --cached
     d = diff
     dh = diff HEAD~ HEAD
