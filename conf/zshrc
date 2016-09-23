@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.dotfiles/dl/zshrc_grml
+source ~/.dotfiles/.dl/zshrc_grml
 source ~/.zsh/aliases
 
 # Shell-Funktionen

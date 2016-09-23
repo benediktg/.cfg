@@ -1,5 +1,5 @@
 *.swp
-dl/*
+.dl/*
 conf/vim/colors/solarized.vim
 conf/zsh/functions/transfer.sh
 bin/L-*
