@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if ! hash jq; then
+    echo "'jq' is missing"
+    echo "please do something like 'zypper install jq'"
+    exit 1
+elif (( $# == 0 )); then
+    echo "missing arguments"
+    exit 1
+fi
+
+tmpf="$(mktemp)"
+
+if (( $# == 2 )); then
+    curl --silent "https://api.github.com/repos/$1/$2/releases/latest" --output "$tmpf"
+elif (( $# == 1 )); then
+    curl --silent "https://api.github.com/repos/$1/releases/latest" --output "$tmpf"
+fi
+
+jq --raw-output '.assets[] | .browser_download_url' "$tmpf"
+rm "$tmpf"
