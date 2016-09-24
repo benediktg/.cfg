@@ -8,6 +8,7 @@ alias secpwgen="pwgen -Bv 16 1"
 alias dirs="dirs -v"
 alias ip4="curl --silent https://4.ifcfg.me"
 alias ip6="curl --silent https://6.ifcfg.me"
+alias newline="sed -i '$a\'"
 
 # desktop
 alias ec="emacsclient -c"
