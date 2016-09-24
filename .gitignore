@@ -3,3 +3,4 @@
 conf/vim/colors/solarized.vim
 conf/zsh/functions/transfer.sh
 bin/L-*
+conf/vim/.netrwhist

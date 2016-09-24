@@ -83,7 +83,9 @@
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
-    rbo = rebase --onto=master
+    rbm = rebase --onto=master
+    rbo = rebase --onto
+    rbom = rebase --onto=master master
     rb = rebase
     rbs = rebase --skip
     reha = reset --hard
