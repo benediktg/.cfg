@@ -33,6 +33,7 @@ alias remake="make clean && make -j4"
 alias gppp="g++ -O2 -g -fno-omit-frame-pointer -DNDEBUG -fno-inline-functions -fno-inline-functions-called-once -fno-optimize-sibling-calls"
 alias sdkman-install="curl --silent "https://get.sdkman.io" | bash"
 alias sdkman-source="source ~/.sdkman/bin/sdkman-init.sh"
+alias java-loc='printf "Impl.: %s \nTest: %s \nTotal: %s \n" "$(wc -l src/main/**/*.java | tail -n1)" "$(wc -l src/test/**/*.java | tail -n1)" "$(wc -l **/*.java | tail -n1)"'
 
 # server
 alias www="sudo -u www-data"
