@@ -43,6 +43,8 @@
     ai = add --interactive
     ap = add --patch
     b = branch
+    c = commit
+    cs = commit --gpg-sign
     ca = commit --all
     cas = commit --all --gpg-sign
     cf = config
@@ -50,6 +52,8 @@
     cob = checkout -b
     co = checkout
     cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
     currentbranch = rev-parse --abbrev-ref HEAD
     cva = commit --verbose --all
     cvas = commit --verbose --all --gpg-sign
