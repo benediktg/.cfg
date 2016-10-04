@@ -3,8 +3,12 @@
         create: true
         relink: true
 
-- clean:
-    ['~', '~/.gnupg']
+- clean: [
+    '~',
+    '~/.gnupg',
+    '~/.gradle',
+    '~/.ssh',
+    ]
 
 - link:
     ~/.dotfiles: ''
@@ -12,7 +16,9 @@
     ~/.gitconfig: conf/gitconfig
     ~/.gitignore_global: conf/gitignore_global
     ~/.gnupg/gpg.conf: conf/gpg.conf
+    ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
     ~/.spacemacs: conf/spacemacs
+    ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf
     ~/.vim: conf/vim
     ~/.vimrc: conf/vimrc
