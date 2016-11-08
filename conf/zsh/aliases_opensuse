@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#misc
+alias grubupdate='sudo grub2-mkconfig -o /boot/grub2/grub.cfg && sudo grub2-install /dev/sda'
+
+# server
+alias www='sudo sudo -u wwwrun'
+alias dup='sudo zypper dup --no-allow-vendor-change'
+alias occtl='sudo sudo -u wwwrun php /srv/www/htdocs/owncloud/occ'
+alias ncctl='sudo sudo -u wwwrun php /srv/www/htdocs/nextcloud/occ'
+alias cdwww='cd /srv/www/htdocs'

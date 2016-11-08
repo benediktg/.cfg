@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# server
+alias www='sudo -u www-data'
+alias agu='sudo apt update && sudo aptitude safe-upgrade && sudo checkrestart'
+alias aguu='sudo apt update && sudo apt full-upgrade && sudo checkrestart'
+alias occtl='sudo -u www-data php /var/www/owncloud/occ'
+alias ncctl='sudo -u www-data php /var/www/nextcloud/occ'
+alias cdwww='cd /var/www'

@@ -14,7 +14,6 @@ alias newline="sed -i '$a\'"
 alias ec='emacsclient -c'
 alias em='q emacs'
 alias gitka='gitk --all'
-alias grubupdate='sudo grub2-mkconfig -o /boot/grub2/grub.cfg && sudo grub2-install /dev/sda'
 alias ok='q okular'
 alias kdb='q kdbg'
 alias gw='q gwenview'
@@ -34,10 +33,3 @@ alias gppp='g++ -O2 -g -fno-omit-frame-pointer -DNDEBUG -fno-inline-functions -f
 alias sdkman-install="curl --silent 'https://get.sdkman.io' | bash"
 alias sdkman-source='source ~/.sdkman/bin/sdkman-init.sh'
 alias java-loc='printf "Impl.: %s \nTest: %s \nTotal: %s \n" "$(wc -l src/main/**/*.java | tail -n1)" "$(wc -l src/test/**/*.java | tail -n1)" "$(wc -l **/*.java | tail -n1)"'
-
-# server
-alias www='sudo -u www-data'
-alias agu='sudo apt update && sudo aptitude safe-upgrade && sudo checkrestart'
-alias aguu='sudo apt update && sudo apt full-upgrade && sudo checkrestart'
-alias occtl='sudo -u www-data php /var/www/owncloud/occ'
-alias ncctl='sudo -u www-data php /var/www/nextcloud/occ'

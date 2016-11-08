@@ -3,6 +3,14 @@
 source ~/.dotfiles/.dl/zshrc_grml
 source ~/.zsh/aliases
 
+export DISTRO_ID="$(grep "^ID=" /etc/os-release | cut -d'=' -f2)"
+
+if [[ "$DISTRO_ID" == "debian" ]]; then
+    source ~/.zsh/aliases_debian
+elif [[ "$DISTRO_ID" == "opensuse" ]]; then
+    source ~/.zsh/aliases_opensuse
+fi
+
 # Shell-Funktionen
 for func in ~/.zsh/functions/*; do
     source "$func"
