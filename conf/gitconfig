@@ -36,8 +36,14 @@
 [url "https://gitlab.com/"]
     insteadOf = gl:
 
+[url "git@gitlab.com:"]
+    insteadOf = sgl:
+
 [url "https://github.com/"]
     insteadOf = gh:
+
+[url "git@github.com:"]
+    insteadOf = sgh:
 
 [alias]
     ai = add --interactive
