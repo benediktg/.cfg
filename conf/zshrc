@@ -17,5 +17,8 @@ for func in ~/.zsh/functions/*; do
 done
 
 export PATH="$HOME/.dotfiles/bin:$PATH"
+
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
+[[ -e /usr/bin/virtualenvwrapper ]] && source /usr/bin/virtualenvwrapper
+
 source ~/.zsh/highlighting/zsh-syntax-highlighting.zsh
