@@ -10,4 +10,3 @@ gstb() {
     git status
     git checkout -q "$cb"
 }
-

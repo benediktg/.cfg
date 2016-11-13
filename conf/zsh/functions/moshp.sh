@@ -2,5 +2,5 @@
 
 moshp()
 {
-	mosh --ssh="ssh -p $1" "$2"
+    mosh --ssh="ssh -p $1" "$2"
 }
