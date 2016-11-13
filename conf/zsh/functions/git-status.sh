@@ -1,6 +1,7 @@
 #!/bin/bash
 
-gstb() {
+gstb()
+{
     if (( $# != 1 )); then
         return 1
     fi
