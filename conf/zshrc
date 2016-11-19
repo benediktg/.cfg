@@ -16,10 +16,9 @@ for func in ~/.zsh/functions/*; do
     source "$func"
 done
 
-export PATH="$HOME/.dotfiles/bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$PATH"
 
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
-export VIRTUALENVWRAPPER_SCRIPT="$HOME/.local/bin/virtualenvwrapper.sh"
 [[ -e ~/.local/bin/virtualenvwrapper_lazy.sh ]] && source ~/.local/bin/virtualenvwrapper_lazy.sh
 
 source ~/.zsh/highlighting/zsh-syntax-highlighting.zsh
