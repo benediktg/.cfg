@@ -19,6 +19,7 @@ done
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
-[[ -e /usr/bin/virtualenvwrapper ]] && source /usr/bin/virtualenvwrapper
+export VIRTUALENVWRAPPER_SCRIPT="$HOME/.local/bin/virtualenvwrapper.sh"
+[[ -e ~/.local/bin/virtualenvwrapper_lazy.sh ]] && source ~/.local/bin/virtualenvwrapper_lazy.sh
 
 source ~/.zsh/highlighting/zsh-syntax-highlighting.zsh

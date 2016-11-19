@@ -6,7 +6,7 @@ gsdst()
         cd "$i/.."
         echo "--------------------\n\n$PWD\n"
         git fetch
-        git status
+        git status --porcelain
         cd "$OLDPWD"
     done
 }
