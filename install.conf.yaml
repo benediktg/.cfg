@@ -15,6 +15,8 @@
     ~/.gitconfig: conf/gitconfig
     ~/.gitignore_global: conf/gitignore_global
     ~/.gnupg/gpg.conf: conf/gpg.conf
+    ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
+    ~/.gnupg/gpg-agent.conf: conf/gpg-agent.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
     ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf
