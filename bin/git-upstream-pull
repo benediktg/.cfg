@@ -1,0 +1,62 @@
+#!/bin/bash
+
+if [[ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" != "true" ]]; then
+    echo "not in a git repo"
+    exit 1
+fi
+
+remote="$(git remote)"
+branch="$(git currentbranch)"
+upstream="upstream"
+if (( $# == 0 )); then
+    if [[ ! $remote =~ $upstream ]]; then
+        if hash jq; then
+            repo="$(curl --silent https://api.github.com/repos/\
+                $(git remote get-url --all origin\
+                    | cut -d':' -f2 | cut -d'.' -f-1)\
+                | jq .parent.html_url)"
+            if [[ "$repo" == "null" ]]; then
+                echo "there is no upstream repo"
+                exit 0
+            fi
+        else
+            echo "'jq' is missing"
+            echo "please do something like 'zypper install jq'"
+            echo "or instead put in a repo URL:"
+
+            IFS= read -r repo
+            if [[ -z $repo ]]; then
+                echo "aborting"
+                exit 1
+            fi
+        fi
+    fi
+elif (( $# == 1 )); then
+    repo="$1"
+else
+    case $1 in
+        gh)
+            repo="https://github.com/$2.git" ;;
+        gl)
+            repo="https://gitlab.com/$2.git" ;;
+        nab)
+            repo="https://notabug.org/$2.git" ;;
+        gnuio)
+            repo="https://git.gnu.io/$2.git" ;;
+        kde)
+            repo="git://anongit.kde.org/$2.git" ;;
+        *)
+            echo "wrong arg[1]"
+            exit 1 ;;
+    esac
+fi
+if [[ ! $remote =~ $upstream ]]; then
+    git remote add $upstream "$repo"
+fi
+git fetch $upstream
+git checkout master
+git rebase $upstream/master
+git push origin master
+git checkout "$branch"
+git rebase master
+exit 0
