@@ -4,18 +4,17 @@ if ! hash jq; then
     echo "'jq' is missing"
     echo "please do something like 'zypper install jq'"
     exit 1
-elif (( $# == 0 )); then
-    echo "missing arguments"
-    exit 1
 fi
 
-tmpf="$(mktemp)"
-
-if (( $# == 2 )); then
-    curl --silent "https://api.github.com/repos/$1/$2/releases/latest" --output "$tmpf"
-elif (( $# == 1 )); then
-    curl --silent "https://api.github.com/repos/$1/releases/latest" --output "$tmpf"
+if (( $# == 0 )); then
+    if [[ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" != "true" ]]; then
+        echo "not in a git repo"
+        exit 1
+    fi
+    repo=$(git remote get-url --all origin | cut -d':' -f2 | cut -d'.' -f-1)
+else
+    repo=$1
 fi
 
-jq --raw-output '.assets[] | .browser_download_url' "$tmpf"
-rm "$tmpf"
+curl --silent https://api.github.com/repos/"$repo"/releases/latest\
+| jq '.assets[] | .browser_download_url'
