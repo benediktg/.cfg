@@ -1,4 +1,6 @@
 #!/bin/bash
+# Source: https://gist.github.com/JonathonReinhart/573694d541dc2108f7629aaa615cef3b
+
 for f in /sys/class/net/*; do
     dev=$(basename "$f")
     driver=$(readlink "$f/device/driver/module")

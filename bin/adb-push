@@ -1,4 +1,5 @@
 #!/bin/bash
+# Source: https://stackoverflow.com/a/28973768
 
 # Usage:
 # adb-push <directory-on-computer-to-send> <directory-on-device-to-receive-it>
@@ -22,4 +23,3 @@ if [ -d "${src}" ]; then
 fi
 
 adb push "${src}" "${dst}/${trgt}"
-
