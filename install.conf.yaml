@@ -5,6 +5,7 @@
 
 - clean: [
     '~',
+    '~/.config',
     '~/.gnupg',
     '~/.gradle',
     '~/.ssh',
@@ -18,6 +19,7 @@
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
     ~/.gnupg/gpg-agent.conf: conf/gpg-agent.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
+    ~/.config/liquidpromptrc: conf/liquidpromptrc
     ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf
     ~/.vim: conf/vim
