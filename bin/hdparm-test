@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+
+import json
+import shlex
+import subprocess
+import sys
+
+
+def hdparm(device_name):
+    device_name = shlex.quote(device_name)
+    command = [
+        subprocess.run(cmd, stdout=subprocess.PIPE)
+        for cmd in [
+            shlex.split(line)
+            for line in ("hdparm --direct -tT " + device_name,
+                         "hdparm -tT " + device_name)
+        ]
+    ]
+    sth_went_wrong = any([
+        cmd.returncode
+        for cmd in command
+    ])
+    if sth_went_wrong:
+        sys.exit("Something went wrong while executing hdparm. (1)")
+    cmd_return_str = command[0].stdout.decode() \
+        + "\n" \
+        + command[1].stdout.decode()
+    return_list = [
+        elem.strip()
+        for elem in cmd_return_str.split("\n")
+        if elem.strip() not in ("", device_name + ":")
+    ]
+    values = []
+    for elem in return_list:
+        values.append(elem.split(' = ')[1])
+    if len(values) != 4:
+        sys.exit("Something went wrong while executing hdparm. (2)")
+    return {
+        'raw': {
+            'cache': values[0],
+            'disk': values[1]
+        },
+        'paged': {
+            'cache': values[2],
+            'disk': values[3]
+        }
+    }
+
+
+def test(device_names):
+    device_names = [
+        shlex.quote(device_name)
+        for device_name in device_names
+    ]
+    result = {}
+    for device_name in device_names:
+        result[device_name] = hdparm(device_name)
+    return result
+
+if __name__ == "__main__":
+    print(json.dumps(test(sys.argv[1:])))
