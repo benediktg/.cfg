@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl --head --silent "$1" | sed --silent 's/Location: *//p'

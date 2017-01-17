@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl --head --silent --location "$1" | grep 'HTTP/'
