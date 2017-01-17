@@ -73,6 +73,7 @@
     eml = config user.email
     f = fetch --tags --prune
 	fa = fetch --all --tags --prune
+    fr = fetch --tags --prune --recurse-submodules
     ka = !gitk --all
     k = !gitk
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
