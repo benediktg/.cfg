@@ -104,6 +104,7 @@
     rv = remote --verbose
     sb = show-branch
     sh = stash
+    shp = stash show -p
     s = show
     st = status
     ta = !tig --all
