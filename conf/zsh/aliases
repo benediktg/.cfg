@@ -9,6 +9,7 @@ alias dirs='dirs -v'
 alias ip4="curl --silent 'https://4.ifcfg.me'"
 alias ip6="curl --silent 'https://6.ifcfg.me'"
 alias newline="sed -i '$a\'"
+alias trim="sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'"
 
 # desktop
 alias ec='emacsclient -c'
