@@ -9,7 +9,7 @@ alias ngx='sudo sudo -u nginx'
 alias pg='sudo -u postgres'
 alias dup='sudo zypper dup --no-allow-vendor-change'
 alias zp='sudo zypper patch'
+alias zup='sudo zypper up'
 alias occtl='sudo sudo -u wwwrun php /srv/www/htdocs/owncloud/occ'
 alias ncctl='sudo sudo -u wwwrun php /srv/www/htdocs/nextcloud/occ'
 alias cdwww='cd /srv/www'
-
