@@ -76,8 +76,8 @@
     fr = fetch --tags --prune --recurse-submodules
     ka = !gitk --all
     k = !gitk
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     l = log
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     logn = !git lg | head -n
     lp = log --patch
     ma = merge --abort
@@ -91,6 +91,7 @@
     pl = pull --rebase
     pso = push origin :
     ps = push
+    r = remote
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
@@ -100,15 +101,16 @@
     rb = rebase
     rbs = rebase --skip
     reha = reset --hard
-    r = remote
+    rh = reset --hard
+    rs = reset --soft
     rv = remote --verbose
+    s = show
     sb = show-branch
     sh = stash
     shp = stash show -p
-    s = show
     st = status
-    ta = !tig --all
     t = !tig
+    ta = !tig --all
     ui = gui
     undo = "!f() { \\\n    git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \\\n}; f"
     up = !git fetch && git rebase origin/master
