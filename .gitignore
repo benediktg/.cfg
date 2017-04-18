@@ -2,4 +2,5 @@
 .dl/
 conf/zsh/functions/transfer.sh
 bin/L-*
-conf/vim/
+conf/vim/autoload/
+conf/vim/plugged/
