@@ -42,3 +42,11 @@ set ignorecase
 set smartcase
 set hlsearch
 " }
+
+" Plugins {
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-sensible'
+
+call plug#end()
+" }

@@ -1,6 +1,5 @@
 *.swp
-.dl/*
-conf/vim/colors/solarized.vim
+.dl/
 conf/zsh/functions/transfer.sh
 bin/L-*
-conf/vim/.netrwhist
+conf/vim/

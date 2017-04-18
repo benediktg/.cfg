@@ -29,5 +29,6 @@
 
 - shell:
     - git submodule update --init --recursive
-    - wget -qO ~/.dotfiles/.dl/zshrc_grml http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
-    - wget -qO ~/.zsh/functions/transfer.sh https://gist.githubusercontent.com/nl5887/a511f172d3fb3cd0e42d/raw/transfer.sh
+    - curl -sfLo ~/.dotfiles/.dl/zshrc_grml --create-dirs http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+    - curl -sfLo ~/.zsh/functions/transfer.sh https://gist.githubusercontent.com/nl5887/a511f172d3fb3cd0e42d/raw/transfer.sh
+    - curl -sfLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
