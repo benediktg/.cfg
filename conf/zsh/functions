@@ -1,5 +1,58 @@
 #!/bin/bash
 
+ems()
+{
+    if [[ $(pgrep -x emacs) == "" ]]; then
+        emacs
+    else
+        emacsclient -c
+    fi
+}
+
+gstb()
+{
+    if (( $# != 1 )); then
+        return 1
+    fi
+    local cb
+    cb="$(git currentbranch)"
+    git checkout -q "$1"
+    git status
+    git checkout -q "$cb"
+}
+
+gsdst()
+{
+    for i in $(find -type d -name '.git'); do
+        cd "$i/.."
+        echo "--------------------\n\n$PWD\n"
+        git fetch
+        git status --porcelain
+        cd "$OLDPWD"
+    done
+}
+
+gradle-checkstyle ()
+{
+    printf "Main: %3d\n" "$(./gradlew checkstyleMain --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)" 
+    printf "Test: %3d\n" "$(./gradlew checkstyleTest --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)" 
+}
+
+moshp()
+{
+    mosh --ssh="ssh -p $1" "$2"
+}
+
+mv-extension()
+{
+    if (( $# != 2 )); then
+        return 1
+    fi
+    for i in *.$1; do
+        mv "$i" "${i%%.$1}.$2"
+    done
+}
+
 version_gt()
 {
     [[ "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1" ]]
@@ -78,5 +131,19 @@ nextcloud-show-remaining-installed-apps()
     diff installed-apps.txt custom-apps.txt | ack "^< " | cut -d' ' -f2
 
     cd "$prvdir" || return 1
+    return 0
+}
+
+nopager() {
+    echo "$("$@")"
+}
+
+q()
+{
+    if [[ -z "$*" ]]; then
+        echo "missing argument"
+        return 1
+    fi
+    $("$@" &> /dev/null &)
     return 0
 }

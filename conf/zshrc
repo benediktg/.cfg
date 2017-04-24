@@ -12,9 +12,7 @@ elif [[ "$DISTRO_ID" == "opensuse" ]]; then
 fi
 
 # Shell-Funktionen
-for func in ~/.zsh/functions/*; do
-    source "$func"
-done
+source ~/.zsh/functions
 
 export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$PATH"
 
