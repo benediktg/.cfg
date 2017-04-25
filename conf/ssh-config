@@ -1,2 +1,8 @@
 Host *
     ServerAliveInterval 90
+
+Host tuc
+    User geib
+    HostName login.tu-chemnitz.de
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
