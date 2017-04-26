@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -f "$1" ]]; then
+    case $1 in
+        *.json)
+            if hash jq; then exec jq -C . "$1"; fi ;;
+    esac
+fi
+
+exit 1

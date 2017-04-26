@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ -z "$LESSOPEN" ]]; then
+    LESSOPEN='|"$HOME/.lessfilter" %s'
+fi
+
+export LESSOPEN
