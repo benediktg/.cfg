@@ -32,22 +32,34 @@ set ruler
 set laststatus=2
 set wrap
 set title
-set scrolloff=1
-set sidescrolloff=1
+set scrolloff=3
+set sidescrolloff=5
+set sidescroll=1
+set updatetime=250
 set autoread
 set autowrite       " Automatically save before commands like :next and :make
 set wildmenu
 set wildmode=longest:full,full
 set wildignore+=tags,.*.un~,*.pyc
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico,*.tif
+set wildignore+=*.pdf,*.psd,*.xcf
+set wildignore+=node_modules/*,bower_components/*
 set lazyredraw
+set splitright
+set splitbelow
 " }
 
 " Suche {
 set incsearch
 set ignorecase
 set smartcase
-set hlsearch
+set nohlsearch
 " }
+
+set spell
+set iskeyword-=_
+set nrformats=
+set formatoptions+=roq
 
 " Mappings {
 :let mapleader = ','

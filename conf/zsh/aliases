@@ -4,6 +4,7 @@
 alias szhrc='source ~/.zshrc'
 alias cnf='command-not-found'
 alias g='git'
+alias l='ls -lhp --color=auto'
 alias secpwgen='pwgen -Bv 16 1'
 alias dirs='dirs -v'
 alias ip4="curl --silent 'https://4.ifcfg.me'"
