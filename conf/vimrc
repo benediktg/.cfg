@@ -56,7 +56,6 @@ set smartcase
 set nohlsearch
 " }
 
-set spell
 set iskeyword-=_
 set nrformats=
 set formatoptions+=roq
