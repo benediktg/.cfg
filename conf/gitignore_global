@@ -12,3 +12,9 @@ auto-save-list
 *.rel
 *.o
 *.out
+*.orig
+*.bak
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
