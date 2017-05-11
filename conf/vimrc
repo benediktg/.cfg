@@ -1,19 +1,17 @@
-" notwendig & Basiskonfig {
+" notwendig & Basiskonfig
 set nocompatible
 set backspace=indent,eol,start
 filetype plugin on
 set encoding=utf-8
 set ffs=unix,dos,mac
-" }
 
-" Syntaxhighlighting & Farbe {
+" Syntaxhighlighting & Farbe
 syntax enable
 set background=dark
 colorscheme default
 set t_Co=16
-" }
 
-" Einrückung & Tabulator {
+" Einrückung & Tabulator
 filetype indent on
 set autoindent
 set smartindent
@@ -21,13 +19,12 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-" }
 set breakindent
 set formatoptions=l
 set lbr
 set showbreak=**\ \
 
-" Bedienung {
+" Bedienung
 set number
 set relativenumber
 set cursorline
@@ -52,20 +49,18 @@ set wildignore+=node_modules/*,bower_components/*
 set lazyredraw
 set splitright
 set splitbelow
-" }
 
-" Suche {
+" Suche
 set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
-" }
 
 set iskeyword-=_
 set nrformats=
 set formatoptions+=roq
 
-" Mappings {
+" Mappings
 :let mapleader = ','
 nmap < [
 nmap > ]
@@ -73,7 +68,6 @@ omap < [
 omap > ]
 xmap < [
 xmap > ]
-" }
 
 nmap <Leader>m :set so=999<cr>
 nmap <Leader><Leader>m :set so=0<cr>
@@ -86,7 +80,7 @@ inoremap ii <Esc>$a
 inoremap jk <Esc>
 nnoremap + :
 
-" Plugins {
+" Plugins
 call plug#begin('~/.vim/plugged')
 runtime plugins.vim
 call plug#end()
@@ -97,4 +91,3 @@ augroup autosourcing
     autocmd!
     autocmd BufWritePost .vimrc source %
 augroup END
-" }
