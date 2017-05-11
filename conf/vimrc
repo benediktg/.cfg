@@ -11,7 +11,7 @@ set background=dark
 colorscheme default
 set t_Co=16
 
-" Einrückung & Tabulator
+" EinrÃ¼ckung & Tabulator
 filetype indent on
 set autoindent
 set smartindent
