@@ -22,9 +22,14 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 " }
+set breakindent
+set formatoptions=l
+set lbr
+set showbreak=**\ \
 
 " Bedienung {
 set number
+set relativenumber
 set cursorline
 set showmode
 set showcmd
@@ -70,10 +75,26 @@ xmap < [
 xmap > ]
 " }
 
+nmap <Leader>m :set so=999<cr>
+nmap <Leader><Leader>m :set so=0<cr>
+
+nmap <Leader>ev :e $MYVIMRC<cr>
+
+nnoremap j gj
+nnoremap k gk
+inoremap ii <Esc>$a
+inoremap jk <Esc>
+nnoremap + :
+
 " Plugins {
 call plug#begin('~/.vim/plugged')
 runtime plugins.vim
 call plug#end()
 
 runtime plugin-settings.vim
+
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
 " }
