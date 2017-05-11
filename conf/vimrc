@@ -62,12 +62,6 @@ set formatoptions+=roq
 
 " Mappings
 :let mapleader = ','
-nmap < [
-nmap > ]
-omap < [
-omap > ]
-xmap < [
-xmap > ]
 
 nmap <Leader>m :set so=999<cr>
 nmap <Leader><Leader>m :set so=0<cr>
