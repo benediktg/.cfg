@@ -5,16 +5,15 @@ alias szhrc='source ~/.zshrc'
 alias cnf='command-not-found'
 alias g='git'
 alias l='ls -lhp --color=auto'
-alias secpwgen='pwgen -Bv 16 1'
 alias dirs='dirs -v'
 alias ip4="curl --silent 'https://4.ifcfg.me'"
 alias ip6="curl --silent 'https://6.ifcfg.me'"
 alias newline="sed -i '$a\'"
 alias trim="sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'"
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
 
 # desktop
-alias ec='emacsclient -c'
-alias em='q emacs'
 alias gitka='gitk --all'
 alias ok='q okular'
 alias kdb='q kdbg'
