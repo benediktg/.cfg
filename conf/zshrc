@@ -13,6 +13,7 @@ fi
 
 # Shell-Funktionen
 source ~/.zsh/functions
+source ~/.dotfiles/.dl/transfer.sh
 
 export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$PATH"
 
