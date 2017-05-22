@@ -147,3 +147,7 @@ q()
     $("$@" &> /dev/null &)
     return 0
 }
+
+yarng() {
+    yarn global "$@" --prefix ~/.local
+}
