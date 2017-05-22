@@ -23,13 +23,13 @@ gstb()
 
 gsdst()
 {
-    for i in $(find -type d -name '.git'); do
-        cd "$i/.."
-        echo "--------------------\n\n$PWD\n"
+    while IFS= read -r -d '' i; do
+        cd "$i/.." || return
+        printf "--------------------\n\n%s\n" "$PWD"
         git fetch
         git status --porcelain
-        cd "$OLDPWD"
-    done
+        cd "$OLDPWD" || return
+    done < <(find . -type d -name '.git')
 }
 
 gradle-checkstyle()
@@ -60,7 +60,7 @@ version_gt()
 
 nopager()
 {
-    echo "$("$@")"
+    printf "%s\n" "$("$@")"
 }
 
 q()
@@ -69,6 +69,7 @@ q()
         echo "missing argument"
         return 1
     fi
+    # shellcheck disable=SC2091
     $("$@" &> /dev/null &)
     return 0
 }
