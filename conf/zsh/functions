@@ -58,11 +58,6 @@ version_gt()
     [[ "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1" ]]
 }
 
-nopager()
-{
-    printf "%s\n" "$("$@")"
-}
-
 q()
 {
     if [[ -z "$*" ]]; then

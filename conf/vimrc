@@ -19,7 +19,9 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set breakindent
+if v:version >= 800
+    set breakindent
+endif
 set formatoptions=l
 set lbr
 set showbreak=**\ \

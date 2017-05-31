@@ -18,7 +18,6 @@ source ~/.dotfiles/.dl/transfer.sh
 export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$PATH"
 
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
-source ~/.zsh/virtualenvwrapper.sh
 
 setopt HIST_IGNORE_SPACE
 
