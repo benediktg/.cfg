@@ -9,6 +9,7 @@ alias g='git'
 alias ip4="curl --silent 'https://4.ifcfg.me'"
 alias ip6="curl --silent 'https://6.ifcfg.me'"
 alias l='ls -lhp --color=auto'
+alias lskern="tput setaf 3; uname -r | cut -d '-' -f -2; tput sgr0; rpm -q kernel-default | cut -d '-' -f 3- | cut -d '.' -f -4"
 alias newline="sed -i '$a\'"
 alias nopg='PAGER='
 alias szhrc='source ~/.zshrc'
