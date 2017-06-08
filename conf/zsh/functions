@@ -34,8 +34,8 @@ gsdst()
 
 gradle-checkstyle()
 {
-    printf "Main: %3d\n" "$(./gradlew checkstyleMain --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)" 
-    printf "Test: %3d\n" "$(./gradlew checkstyleTest --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)" 
+    printf "Main: %3d\n" "$(./gradlew checkstyleMain --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)"
+    printf "Test: %3d\n" "$(./gradlew checkstyleTest --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)"
 }
 
 moshp()
@@ -64,8 +64,7 @@ q()
         echo "missing argument"
         return 1
     fi
-    # shellcheck disable=SC2091
-    $("$@" &> /dev/null &)
+    ("$@" &> /dev/null &)
     return 0
 }
 
