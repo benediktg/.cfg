@@ -1,5 +1,19 @@
 #!/bin/bash
 
+function adngx()
+{
+    set -u
+    local wwwuser='nginx'
+    for f in "$@"; do
+        if [[ -f "$f" ]]; then
+            chmod 0640 "$f"
+        elif [[ -d "$f" ]]; then
+            chmod 0750 "$f"
+        fi
+        chown root:"$wwwuser" "$f"
+    done
+}
+
 function ems()
 {
     if [[ $(pgrep -x emacs) == "" ]]; then
@@ -45,6 +59,7 @@ function moshp()
 
 function mv-extension()
 {
+    set -u
     if (( $# != 2 )); then
         return 1
     fi
@@ -70,5 +85,6 @@ function q()
 
 function yarng()
 {
+    set -u
     yarn global "$@" --prefix ~/.local
 }
