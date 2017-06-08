@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ems()
+function ems()
 {
     if [[ $(pgrep -x emacs) == "" ]]; then
         emacs
@@ -9,7 +9,7 @@ ems()
     fi
 }
 
-gstb()
+function gstb()
 {
     if (( $# != 1 )); then
         return 1
@@ -21,7 +21,7 @@ gstb()
     git checkout -q "$cb"
 }
 
-gsdst()
+function gsdst()
 {
     while IFS= read -r -d '' i; do
         cd "$i/.." || return
@@ -32,18 +32,18 @@ gsdst()
     done < <(find . -type d -name '.git')
 }
 
-gradle-checkstyle()
+function gradle-checkstyle()
 {
     printf "Main: %3d\n" "$(./gradlew checkstyleMain --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)"
     printf "Test: %3d\n" "$(./gradlew checkstyleTest --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)"
 }
 
-moshp()
+function moshp()
 {
     mosh --ssh="ssh -p $1" "$2"
 }
 
-mv-extension()
+function mv-extension()
 {
     if (( $# != 2 )); then
         return 1
@@ -53,12 +53,12 @@ mv-extension()
     done
 }
 
-version_gt()
+function version_gt()
 {
     [[ "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1" ]]
 }
 
-q()
+function q()
 {
     if [[ -z "$*" ]]; then
         echo "missing argument"
@@ -68,7 +68,7 @@ q()
     return 0
 }
 
-yarng()
+function yarng()
 {
     yarn global "$@" --prefix ~/.local
 }
