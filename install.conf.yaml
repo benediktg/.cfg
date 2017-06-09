@@ -22,6 +22,7 @@
     ~/.gnupg/gpg.conf: conf/gpg.conf
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
+    ~/.jsbeautifyrc: conf/jsbeautifyrc
     ~/.lessfilter: conf/lessfilter
     ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf
