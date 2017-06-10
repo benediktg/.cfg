@@ -15,9 +15,9 @@
     ~/.config/liquidpromptrc: conf/liquidpromptrc
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
-    ~/.editorconfig: conf/editorconfig
+    ~/.editorconfig: conf/editorconfig.ini
     ~/.eslintrc: conf/eslintrc.json
-    ~/.gitconfig: conf/gitconfig
+    ~/.gitconfig: conf/gitconfig.ini
     ~/.gitignore_global: conf/gitignore_global
     ~/.gnupg/gpg-agent.conf: conf/gpg-agent.conf
     ~/.gnupg/gpg.conf: conf/gpg.conf
