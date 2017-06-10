@@ -16,14 +16,15 @@
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
     ~/.editorconfig: conf/editorconfig
+    ~/.eslintrc: conf/eslintrc.json
     ~/.gitconfig: conf/gitconfig
     ~/.gitignore_global: conf/gitignore_global
     ~/.gnupg/gpg-agent.conf: conf/gpg-agent.conf
     ~/.gnupg/gpg.conf: conf/gpg.conf
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
-    ~/.jsbeautifyrc: conf/jsbeautifyrc
-    ~/.jshintrc: conf/jshintrc
+    ~/.jsbeautifyrc: conf/jsbeautifyrc.json
+    ~/.jshintrc: conf/jshintrc.json
     ~/.lessfilter: conf/lessfilter
     ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf

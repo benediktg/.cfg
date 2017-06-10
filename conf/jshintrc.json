@@ -69,7 +69,7 @@
     "dojo": false, // Dojo Toolkit
     "jasmine": false, // Jasmine
     "jquery": true, // jQuery
-    "mocha": true, // Mocha
+    "mocha": false, // Mocha
     "mootools": false, // MooTools
     "node": false, // Node.js
     "nonstandard": false, // Widely adopted globals (escape, unescape, etc)
