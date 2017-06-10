@@ -82,9 +82,3 @@ function q()
     ("$@" &> /dev/null &)
     return 0
 }
-
-function yarng()
-{
-    set -u
-    yarn global "$@" --prefix ~/.local
-}
