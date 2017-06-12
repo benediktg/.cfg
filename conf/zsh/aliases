@@ -34,6 +34,7 @@ alias java-loc='printf "Impl.: %s \nTest: %s \nTotal: %s \n" "$(wc -l src/main/*
 alias remake='make clean && make -j4'
 alias sdkman-install="curl --silent 'https://get.sdkman.io' | bash"
 alias sdkman-source='source ~/.sdkman/bin/sdkman-init.sh'
+alias venv='python3 -m venv'
 alias vlg='valgrind --track-origins=yes'
 alias vlgl='valgrind --track-origins=yes --leak-check=full --show-leak-kinds=all'
 alias yarng='yarn global --prefix ~/.local'
