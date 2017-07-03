@@ -4,6 +4,7 @@
 alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
 alias cnf='command-not-found'
+alias curl-time="curl --silent --write-out '\n%{time_connect} + %{time_starttransfer} = %{time_total}\n'"
 alias dirs='dirs -v'
 alias g='git'
 alias ip4="curl --silent 'https://4.ifcfg.me'"
