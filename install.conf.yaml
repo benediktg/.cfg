@@ -12,6 +12,7 @@
     ]
 
 - link:
+    ~/.config/flake8: conf/flake8.ini
     ~/.config/liquidpromptrc: conf/liquidpromptrc
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
@@ -23,7 +24,6 @@
     ~/.gnupg/gpg.conf: conf/gpg.conf
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
-    ~/.jsbeautifyrc: conf/jsbeautifyrc.json
     ~/.jshintrc: conf/jshintrc.json
     ~/.lessfilter: conf/lessfilter
     ~/.ssh/config: conf/ssh-config
