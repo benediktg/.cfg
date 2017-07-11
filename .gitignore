@@ -4,3 +4,4 @@ conf/zsh/functions/transfer.sh
 bin/L-*
 conf/vim/autoload/
 conf/vim/plugged/
+.netrwhist
