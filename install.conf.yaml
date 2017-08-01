@@ -6,6 +6,7 @@
 - clean: [
     '~',
     '~/.config',
+    '~/.config/git',
     '~/.gnupg',
     '~/.gradle',
     '~/.ssh',
@@ -13,13 +14,14 @@
 
 - link:
     ~/.config/flake8: conf/flake8.ini
+    ~/.config/git/config: conf/gitconfig.ini
+    ~/.config/git/excludes: conf/gitignore_global
     ~/.config/liquidpromptrc: conf/liquidpromptrc
+    ~/.config/.pylintrc: conf/pylintrc.ini
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
     ~/.editorconfig: conf/editorconfig.ini
     ~/.eslintrc: conf/eslintrc.json
-    ~/.gitconfig: conf/gitconfig.ini
-    ~/.gitignore_global: conf/gitignore_global
     ~/.gnupg/gpg-agent.conf: conf/gpg-agent.conf
     ~/.gnupg/gpg.conf: conf/gpg.conf
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
