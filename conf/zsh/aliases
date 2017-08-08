@@ -14,6 +14,7 @@ alias lskern="tput setaf 3; uname -r | cut -d '-' -f -2; tput sgr0; rpm -q kerne
 alias newline="sed -i '$a\'"
 alias nopg='PAGER='
 alias szhrc='source ~/.zshrc'
+alias tailf='less -S +F'
 alias trim="sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'"
 
 # desktop

@@ -1,6 +1,12 @@
 Host *
     ServerAliveInterval 90
 
+Host g5r
+    HostName g5r.eu
+    User benedikt
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
 Host tuc
     User geib
     HostName login.tu-chemnitz.de
