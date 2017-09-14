@@ -81,6 +81,8 @@ augroup autosourcing
     autocmd BufWritePost .vimrc source %
 augroup END
 
+nnoremap <F5> :GundoToggle<CR>
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 runtime plugins.vim
