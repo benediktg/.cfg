@@ -2,8 +2,8 @@ Host *
     ServerAliveInterval 90
 
 Host g5r
-    HostName g5r.eu
     User benedikt
+    HostName g5r.eu
     IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
 

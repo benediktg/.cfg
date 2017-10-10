@@ -27,6 +27,7 @@
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
     ~/.lessfilter: conf/lessfilter
+    ~/.npmrc: conf/npmrc.ini
     ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf
     ~/.vim: conf/vim
