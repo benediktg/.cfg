@@ -6,6 +6,7 @@
 - clean: [
     '~',
     '~/.config',
+    '~/.config/fontconfig',
     '~/.config/git',
     '~/.gnupg',
     '~/.gradle',
@@ -14,6 +15,7 @@
 
 - link:
     ~/.config/flake8: conf/flake8.ini
+    ~/.config/fontconfig/fonts.conf: conf/fonts.conf
     ~/.config/git/config: conf/gitconfig.ini
     ~/.config/git/excludes: conf/gitignore_global
     ~/.config/liquidpromptrc: conf/liquidpromptrc
