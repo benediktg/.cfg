@@ -5,7 +5,7 @@ alias grubupdate='sudo grub2-mkconfig --output /boot/grub2/grub.cfg && sudo grub
 
 # server
 alias cdwww='cd /srv/www'
-alias dup='sudo zypper dup --no-allow-vendor-change'
+alias dup='sudo zypper dup'
 alias ncctl='sudo sudo --user wwwrun php /srv/www/htdocs/nextcloud/occ'
 alias ngx='sudo sudo --user nginx'
 alias occtl='sudo sudo --user wwwrun php /srv/www/htdocs/owncloud/occ'
