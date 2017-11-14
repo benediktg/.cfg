@@ -29,6 +29,17 @@ function gradle-checkstyle()
     printf "Test: %3d\n" "$(./gradlew checkstyleTest --rerun-tasks 2>&1 | ack "ant:checkstyle" | wc -l)"
 }
 
+function source-env()
+{
+    set -eu
+    set -o allexport
+    if [[ -f "$1" ]]; then
+        source "$1"
+    fi
+    set +o allexport
+    set +eu
+}
+
 function version_gt()
 {
     [[ "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1" ]]

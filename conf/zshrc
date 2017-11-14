@@ -16,6 +16,8 @@ source ~/.zsh/functions
 source ~/.dotfiles/.dl/transfer.sh
 
 export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 
 [[ -e ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
 

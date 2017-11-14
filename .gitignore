@@ -1,7 +1,9 @@
-*.swp
 .dl/
-conf/zsh/functions/transfer.sh
+.netrwhist
+*.swp
 bin/L-*
 conf/vim/autoload/
 conf/vim/plugged/
-.netrwhist
+conf/zsh/completion/_docker-compose
+conf/zsh/completion/_docker
+conf/zsh/functions/transfer.sh
