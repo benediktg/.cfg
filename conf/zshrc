@@ -15,7 +15,8 @@ fi
 source ~/.zsh/functions
 source ~/.dotfiles/.dl/transfer.sh
 
-export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
+export XDG_DATA_DIRS="$HOME/.linuxbrew/share:$XDG_DATA_DIRS"
+export PATH="$HOME/.dotfiles/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.linuxbrew/bin:$PATH"
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
