@@ -1,0 +1,6 @@
+---
+- hosts: local
+  roles:
+    - role: common
+    - role: desktop
+    - role: opensuse

@@ -1,0 +1,52 @@
+---
+- name: Symlink dotfiles
+  file: src='~/{{item.value}}' dest='~/{{item.key}}' state=link force=yes
+  with_dict:
+    .config/flake8: conf/flake8.ini
+    .config/fontconfig/fonts.conf: conf/fonts.conf
+    .config/git/config: conf/gitconfig.ini
+    .config/git/excludes: conf/gitignore_global
+    .config/liquidpromptrc: conf/liquidpromptrc
+    .config/.pylintrc: conf/pylintrc.ini
+    .curlrc: conf/curlrc
+    .editorconfig: conf/editorconfig.ini
+    .eslintrc: conf/eslintrc.json
+    .gnupg/gpg-agent.conf: conf/gpg-agent.conf
+    .gnupg/gpg.conf: conf/gpg.conf
+    .gnupg/gpgsm.conf: conf/gpgsm.conf
+    .gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
+    .lessfilter: conf/lessfilter
+    .npmrc: conf/npmrc.ini
+    .ssh/config: conf/ssh-config
+    .tmux.conf: conf/tmux.conf
+    .vim: conf/vim
+    .vimrc: conf/vimrc
+    .zprofile: conf/zprofile
+    .zsh: conf/zsh
+    .zshrc: conf/zshrc
+
+- name: Link ~/dotfiles to ~/.dotfiles
+  file: src=~/dotfiles dest=~/.dotfiles state=link force=yes
+
+- name: Update git submodules
+  command: git submodule update --init --recursive
+
+- name: Download zsh grml config
+  get_url:
+    url: http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+    dest: ~/.dotfiles/.dl/zshrc_grml
+
+- name: Download transfer.sh
+  get_url:
+    url: https://gist.githubusercontent.com/nl5887/a511f172d3fb3cd0e42d/raw/transfer.sh
+    dest: ~/.dotfiles/.dl/transfer.sh
+
+- name: Download vim plug
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.vim/autoload/plug.vim
+
+- name: Download docker-compose zsh autocompletion
+  get_url:
+    url: https://raw.githubusercontent.com/docker/compose/1.17.0/contrib/completion/zsh/_docker-compose
+    dest: ~/.zsh/completion/_docker-compose

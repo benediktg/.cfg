@@ -1,0 +1,3 @@
+---
+- name: Link docker zsh autocompletion
+  file: src=/etc/zsh_completion.d/docker dest=~/.zsh/completion/_docker state=link force=yes
