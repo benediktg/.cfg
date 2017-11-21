@@ -2,9 +2,10 @@
 .netrwhist
 *.swp
 bin/L-*
-conf/fish/completions/fisher.fish
+conf/fish/completions/fundle.fish
 conf/fish/fishd.*
-conf/fish/functions/fisher.fish
+conf/fish/functions/fundle.fish
+conf/fish/fundle
 conf/vim/autoload/
 conf/vim/plugged/
 conf/zsh/completion/_docker

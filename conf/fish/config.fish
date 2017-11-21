@@ -1,5 +1,3 @@
-#!/usr/bin/fish
-
 # Fish git prompt configuration
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
@@ -30,3 +28,6 @@ function fish_right_prompt
 end
 
 alias g 'git'
+
+
+fundle init
