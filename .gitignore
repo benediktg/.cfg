@@ -2,6 +2,7 @@
 .netrwhist
 *.swp
 bin/L-*
+conf/fish/completions/fisher.fish
 conf/fish/fishd.*
 conf/fish/functions/fisher.fish
 conf/vim/autoload/
