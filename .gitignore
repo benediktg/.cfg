@@ -2,8 +2,10 @@
 .netrwhist
 *.swp
 bin/L-*
+conf/fish/fishd.*
+conf/fish/functions/fisher.fish
 conf/vim/autoload/
 conf/vim/plugged/
-conf/zsh/completion/_docker-compose
 conf/zsh/completion/_docker
+conf/zsh/completion/_docker-compose
 conf/zsh/functions/transfer.sh
