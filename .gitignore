@@ -8,6 +8,15 @@ conf/fish/functions/fundle.fish
 conf/fish/fundle
 conf/vim/autoload/
 conf/vim/plugged/
+conf/vscode/gpm-recentItems.json
+conf/vscode/projects_cache_git.json
+conf/vscode/projects.json
+conf/vscode/sync.lock
+conf/vscode/syncing.json
+conf/vscode/syncLocalSettings.json
+conf/vscode/syncSummary.txt
+conf/vscode/vsicons.settings.json
+conf/vscode/workspaceStorage/
 conf/zsh/completion/_docker
 conf/zsh/completion/_docker-compose
 conf/zsh/functions/transfer.sh

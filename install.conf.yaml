@@ -6,6 +6,7 @@
 - clean: [
     '~',
     '~/.config',
+    '~/.config/Code',
     '~/.config/fontconfig',
     '~/.config/git',
     '~/.gnupg',
@@ -14,13 +15,14 @@
     ]
 
 - link:
+    ~/.config/.pylintrc: conf/pylintrc.ini
+    ~/.config/Code/User: conf/vscode
     ~/.config/fish: conf/fish
     ~/.config/flake8: conf/flake8.ini
     ~/.config/fontconfig/fonts.conf: conf/fonts.conf
     ~/.config/git/config: conf/gitconfig.ini
     ~/.config/git/excludes: conf/gitignore_global
     ~/.config/liquidpromptrc: conf/liquidpromptrc
-    ~/.config/.pylintrc: conf/pylintrc.ini
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
     ~/.editorconfig: conf/editorconfig.ini

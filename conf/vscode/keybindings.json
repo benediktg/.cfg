@@ -1,0 +1,24 @@
+[
+    {
+        "key": "ctrl+shift+[Comma]",
+        "command": "workbench.action.openWorkspaceSettings"
+    },
+    {
+        "key": "alt+i",
+        "command": "extension.wrapTag",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-extension.wrapTag",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+[Period]",
+        "command": "editor.emmet.action.wrapWithAbbreviation"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.joinLines"
+    }
+]
