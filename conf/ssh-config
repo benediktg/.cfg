@@ -13,6 +13,17 @@ Host g5r
     IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
 
+Host dpl
+    User deploy
+    HostName g5r.eu
+    Port 60022
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    ForwardAgent yes
+
+Host *.neptun.g5r.eu git.g5r.eu
+    Port 60022
+
 Host *.tu-chemnitz.de !login.tu-chemnitz.de !gitlab.hrz.tu-chemnitz.de
     User geib
     #ProxyJump login.tu-chemnitz.de
@@ -30,11 +41,3 @@ Host tuc
     HostName login.tu-chemnitz.de
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
-
-Host dpl
-    User deploy
-    HostName g5r.eu
-    Port 60022
-    IdentityFile ~/.ssh/id_ed25519
-    IdentitiesOnly yes
-    ForwardAgent yes

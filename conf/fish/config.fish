@@ -15,7 +15,11 @@ set fish_greeting
 
 # Some default applications
 set -x EDITOR vim
-set -x BROWSER firefox-devel
+set -x BROWSER firefox
+set -x GOPATH $HOME/.local/go
+set -x PATH $PATH \
+    $HOME/bin $HOME/.local/bin \
+    $GOPATH/bin $HOME/.linuxbrew/bin
 
 # Pretty tree
 alias tree "tree -C"
