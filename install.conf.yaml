@@ -9,6 +9,7 @@
     '~/.config/Code',
     '~/.config/fontconfig',
     '~/.config/git',
+    '~/.config/pip',
     '~/.gnupg',
     '~/.gradle',
     '~/.ssh',
@@ -23,6 +24,7 @@
     ~/.config/git/config: conf/gitconfig.ini
     ~/.config/git/excludes: conf/gitignore_global
     ~/.config/liquidpromptrc: conf/liquidpromptrc
+    ~/.config/pip/pip.conf: conf/pip.conf
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
     ~/.editorconfig: conf/editorconfig.ini
