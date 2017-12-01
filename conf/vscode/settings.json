@@ -97,6 +97,16 @@
         "node_modules"
     ],
     "gitProjectManager.maxDepthRecursion": 3,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": true
+    },
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.maxPreserveNewLines": 3,
