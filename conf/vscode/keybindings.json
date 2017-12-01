@@ -36,5 +36,10 @@
     {
         "key": "ctrl+0",
         "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.dash.specific",
+        "when": "editorTextFocus"
     }
 ]

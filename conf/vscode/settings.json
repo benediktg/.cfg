@@ -19,6 +19,7 @@
         "vue",
         "xml"
     ],
+    "closeTag.ignoreTags": "html",
     "deploy": {
         "disableNewVersionPopups": true,
         "displayLoadedPlugins": false,
@@ -107,6 +108,7 @@
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
+    "gitlens.codeLens.enabled": false,
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.maxPreserveNewLines": 3,
