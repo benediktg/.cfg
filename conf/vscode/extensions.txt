@@ -1,5 +1,7 @@
 2gua.rainbow-brackets
 Compulim.compulim-vscode-closetag
+DavidAnson.vscode-markdownlint
+DougFinke.vscode-pandoc
 EQuimper.react-native-react-redux
 EditorConfig.EditorConfig
 James-Yu.latex-workshop
@@ -11,6 +13,8 @@ abusaidm.html-snippets
 alefragnani.project-manager
 bibhasdn.django-html
 bibhasdn.django-snippets
+bierner.emojisense
+bierner.lit-html
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 codezombiech.gitignore
@@ -22,6 +26,7 @@ donjayamanne.githistory
 eamodio.gitlens
 ecmel.vscode-html-css
 eg2.tslint
+eg2.vscode-npm-script
 esbenp.prettier-vscode
 felipecaputo.git-project-manager
 felixfbecker.php-debug
