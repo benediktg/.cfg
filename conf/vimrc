@@ -1,17 +1,16 @@
-" notwendig & Basiskonfig
 set nocompatible
 set backspace=indent,eol,start
 filetype plugin on
 set encoding=utf-8
 set ffs=unix,dos,mac
 
-" Syntaxhighlighting & Farbe
+" Syntaxhighlighting, Farbe "
 syntax enable
 set background=dark
 colorscheme default
 set t_Co=16
 
-" Einrückung & Tabulator
+" Einrückung, Tabulator "
 filetype indent on
 set autoindent
 set smartindent
@@ -26,7 +25,7 @@ set formatoptions=l
 set lbr
 set showbreak=**\ \
 
-" Bedienung
+" Bedienung "
 set number
 set relativenumber
 set cursorline
@@ -52,7 +51,7 @@ set lazyredraw
 set splitright
 set splitbelow
 
-" Suche
+" Suche "
 set incsearch
 set ignorecase
 set smartcase
@@ -62,8 +61,13 @@ set iskeyword-=_
 set nrformats=
 set formatoptions+=roq
 
-" Mappings
-:let mapleader = ','
+" Plugins "
+call plug#begin('~/.vim/plugged')
+runtime plugins.vim
+call plug#end()
+
+" Mappings "
+let mapleader = 's'
 
 nmap <Leader>m :set so=999<cr>
 nmap <Leader><Leader>m :set so=0<cr>
@@ -83,22 +87,17 @@ augroup END
 
 nnoremap <F5> :GundoToggle<CR>
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-runtime plugins.vim
-call plug#end()
-
-" Markdown
+" Markdown "
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'json']
 let g:markdown_syntax_conceal = 0
 let g:markdown_minlines = 100
 
-" Emmet
+" Emmet "
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" Ack.vim
+" Ack.vim "
 if executable('ag')
     let g:ackprg = 'ag --vimgrep --smart-case'
     cnoreabbrev ag Ack

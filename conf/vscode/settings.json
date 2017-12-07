@@ -54,6 +54,7 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
+    "eslint.packageManager": "yarn",
     "extensions.autoUpdate": true,
     "files.associations": {
         "**/*_vars/**/*.yml": "ansible",
@@ -117,6 +118,7 @@
     "html.suggest.ionic": false,
     "javascript.implicitProjectConfig.checkJs": true,
     "javascript.referencesCodeLens.enabled": true,
+    "npm.packageManager": "yarn",
     "prettier.bracketSpacing": false,
     "prettier.eslintIntegration": true,
     "prettier.printWidth": 100,
@@ -143,6 +145,7 @@
     "sync.pathPrefix": "",
     "sync.quietSync": false,
     "telemetry.enableTelemetry": false,
+    "tslint.packageManager": "yarn",
     "typescript.implementationsCodeLens.enabled": true,
     "typescript.referencesCodeLens.enabled": true,
     "window.menuBarVisibility": "toggle",
