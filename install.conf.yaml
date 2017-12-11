@@ -38,7 +38,6 @@
     ~/.ssh/config: conf/ssh-config
     ~/.tmux.conf: conf/tmux.conf
     ~/.vim: conf/vim
-    ~/.vimrc: conf/vimrc
     ~/.zprofile: conf/zprofile
     ~/.zsh: conf/zsh
     ~/.zshrc: conf/zshrc

@@ -1,17 +1,11 @@
 set nocompatible
 set backspace=indent,eol,start
-filetype plugin on
 set encoding=utf-8
 set ffs=unix,dos,mac
-
-" Syntaxhighlighting, Farbe "
 syntax enable
-set background=dark
-colorscheme default
-set t_Co=16
 
 " Einrückung, Tabulator "
-filetype indent on
+filetype indent plugin on
 set autoindent
 set smartindent
 set expandtab
@@ -50,6 +44,7 @@ set wildignore+=node_modules/*,bower_components/*
 set lazyredraw
 set splitright
 set splitbelow
+set hidden
 
 " Suche "
 set incsearch
@@ -60,11 +55,6 @@ set nohlsearch
 set iskeyword-=_
 set nrformats=
 set formatoptions+=roq
-
-" Plugins "
-call plug#begin('~/.vim/plugged')
-runtime plugins.vim
-call plug#end()
 
 " Mappings "
 let mapleader = 's'
@@ -86,6 +76,13 @@ augroup autosourcing
 augroup END
 
 nnoremap <F5> :GundoToggle<CR>
+
+" Plugins "
+call plug#begin('~/.vim/plugged')
+runtime plugins.vim
+call plug#end()
+
+colorscheme kolor
 
 " Markdown "
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
