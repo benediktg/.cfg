@@ -47,6 +47,7 @@
     "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
     "editor.minimap.showSlider": "always",
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
         100
@@ -110,6 +111,7 @@
         "suppressWelcomeNotice": true
     },
     "gitlens.codeLens.enabled": false,
+    "gitlens.keymap": "chorded",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.maxPreserveNewLines": 3,

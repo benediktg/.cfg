@@ -12,7 +12,6 @@ WakaTime.vscode-wakatime
 abusaidm.html-snippets
 alefragnani.project-manager
 bibhasdn.django-html
-bibhasdn.django-snippets
 bierner.emojisense
 bierner.lit-html
 christian-kohler.npm-intellisense
@@ -39,15 +38,14 @@ jeremyrajan.react-component
 lunaryorn.fish-ide
 mkloubert.vs-deploy
 ms-python.python
-ms-vscode.node-debug2
 oderwat.indent-rainbow
 redhat.java
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
+rubbersheep.gi
 sidthesloth.html5-boilerplate
 techer.open-in-browser
 timonwong.shellcheck
-vsmobile.vscode-react-native
 waderyan.gitblame
 wayou.vscode-todo-highlight
 wholroyd.jinja
