@@ -1,12 +1,15 @@
 function fish_prompt
     set last_status $status
-
-    echo -n '['
-
-    if test $USER = root
-        set_color red
+    if not set -qU fish_color_root
+        set -U fish_color_root red
     end
 
+    echo -n '['
+    if test $USER = root
+        set_color $fish_color_root
+    else
+        set_color $fish_color_user
+    end
     echo -n $USER
     set_color normal
 
@@ -18,12 +21,16 @@ function fish_prompt
             set -g FISH_COLOR_HOST (hostname | sha256sum | head -c 6)
         end
         set_color $FISH_COLOR_HOST
-        echo -ns '@' (hostname)
+        echo -n '@'(hostname)
     end
 
     set_color normal
     echo -n ':'
-    set_color $fish_color_cwd
+    if test $USER = root
+        set_color $fish_color_cwd_root
+    else
+        set_color $fish_color_cwd
+    end
     echo -n (prompt_pwd)
     set_color normal
     echo -n '] '
@@ -35,6 +42,10 @@ function fish_prompt
         case 0
             set_color green
     end
-    echo -n "% "
+    if test $USER = root
+        echo -n '# '
+    else
+        echo -n '% '
+    end
     set_color normal
 end
