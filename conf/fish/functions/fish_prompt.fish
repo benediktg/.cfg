@@ -18,6 +18,7 @@ function fish_prompt
         echo -ns '@' (hostname)
     end
 
+    set_color normal
     echo -n ':'
     set_color $fish_color_cwd
     echo -n (prompt_pwd)
