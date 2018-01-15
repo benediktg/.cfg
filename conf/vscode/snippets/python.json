@@ -1,0 +1,11 @@
+{
+    "__init__-Methode überladen": {
+        "prefix": "init",
+        "body": [
+            "def __init__(self,$1 *args, **kwargs):",
+            "    super().__init__(*args, **kwargs)",
+            "    $0"
+        ],
+        "description": "Überlädt die Methode __init__"
+    }
+}
