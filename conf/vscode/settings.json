@@ -20,25 +20,6 @@
         "xml"
     ],
     "closeTag.ignoreTags": "html",
-    "deploy": {
-        "disableNewVersionPopups": true,
-        "displayLoadedPlugins": false,
-        "displayNetworkInfo": false,
-        "hideDeployResultInStatusBarAfter": 2,
-        "ignore": [
-            ".vscode/**"
-        ],
-        "openOutputOnDeploy": false,
-        "showDeployResultInStatusBar": true,
-        "showPopupOnSuccess": false,
-        "showWarningIfIgnored": false,
-        "values": [
-            {
-                "name": "SSH_AUTH_SOCK",
-                "type": "env"
-            }
-        ]
-    },
     "editor.autoIndent": true,
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "'Fira Code', Hack, monospace",
@@ -55,6 +36,10 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html"
+    },
     "eslint.packageManager": "yarn",
     "extensions.autoUpdate": true,
     "files.associations": {
@@ -132,21 +117,20 @@
     "python.linting.pylintEnabled": false,
     "python.venvPath": "~/.venvs",
     "search.useIgnoreFiles": true,
-    "search.useIgnoreFilesByDefault": true,
     "shellcheck.run": "onSave",
     "svgviewer.enableautopreview": true,
-    "sync.anonymousGist": false,
-    "sync.askGistName": false,
-    "sync.autoDownload": false,
-    "sync.autoUpload": false,
-    "sync.forceDownload": false,
-    "sync.gist": "10836419be3be8e654d01dc56395885e",
-    "sync.host": "",
-    "sync.lastDownload": "2017-08-22T00:30:52.073Z",
-    "sync.lastUpload": "",
-    "sync.pathPrefix": "",
-    "sync.quietSync": false,
     "telemetry.enableTelemetry": false,
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.py"
+    ],
     "tslint.packageManager": "yarn",
     "typescript.implementationsCodeLens.enabled": true,
     "typescript.referencesCodeLens.enabled": true,
