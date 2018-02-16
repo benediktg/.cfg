@@ -11,6 +11,9 @@ end
 if test -d $GOPATH/bin
     set -x PATH (string match -v $GOPATH/bin $PATH) $GOPATH/bin
 end
+if test -d $HOME/.cargo/bin
+    set -x PATH (string match -v $HOME/.cargo/bin $PATH) $HOME/.cargo/bin
+end
 if test -d $HOME/.linuxbrew/bin
     set -x PATH (string match -v $HOME/.linuxbrew/bin $PATH) $HOME/.linuxbrew/bin
 end

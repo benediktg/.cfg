@@ -1,4 +1,4 @@
-2gua.rainbow-brackets
+CoenraadS.bracket-pair-colorizer
 Compulim.compulim-vscode-closetag
 DavidAnson.vscode-markdownlint
 DougFinke.vscode-pandoc
@@ -6,14 +6,12 @@ EQuimper.react-native-react-redux
 EditorConfig.EditorConfig
 James-Yu.latex-workshop
 PeterJausovec.vscode-docker
-Shan.code-settings-sync
 TeddyDD.fish
 WakaTime.vscode-wakatime
 abusaidm.html-snippets
 alefragnani.project-manager
 bibhasdn.django-html
 bierner.emojisense
-bierner.lit-html
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 codezombiech.gitignore
@@ -36,7 +34,6 @@ haaaad.ansible
 hbenl.vscode-firefox-debug
 jeremyrajan.react-component
 lunaryorn.fish-ide
-mkloubert.vs-deploy
 ms-python.python
 oderwat.indent-rainbow
 redhat.java
@@ -48,4 +45,5 @@ techer.open-in-browser
 timonwong.shellcheck
 waderyan.gitblame
 wayou.vscode-todo-highlight
+webreflection.literally-html
 wholroyd.jinja

@@ -95,7 +95,12 @@
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
+    "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.scopes": [
+        "document"
+    ],
     "gitlens.keymap": "chorded",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
