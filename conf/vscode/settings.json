@@ -20,6 +20,7 @@
         "xml"
     ],
     "closeTag.ignoreTags": "html",
+    "diffEditor.ignoreTrimWhitespace": true,
     "editor.autoIndent": true,
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "'Fira Code', Hack, monospace",
