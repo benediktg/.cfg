@@ -26,7 +26,7 @@
     "editor.fontFamily": "'Fira Code', Hack, monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
-    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
@@ -41,6 +41,7 @@
         "javascript": "javascriptreact",
         "vue-html": "html"
     },
+    "eslint.autoFixOnSave": true,
     "eslint.packageManager": "yarn",
     "extensions.autoUpdate": true,
     "files.associations": {
@@ -54,7 +55,7 @@
         "**/tasks/**/*.yml": "ansible",
         "**/vars/**/*.yml": "ansible"
     },
-    "files.autoSave": "onWindowChange",
+    "files.autoSave": "onFocusChange",
     "files.exclude": {
         "**/*.min.css": true,
         "**/*.min.js": true,
@@ -93,6 +94,8 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
@@ -113,6 +116,13 @@
     "javascript.referencesCodeLens.enabled": true,
     "npm.packageManager": "yarn",
     "prettier.bracketSpacing": false,
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue"
+    ],
     "prettier.eslintIntegration": true,
     "prettier.printWidth": 100,
     "prettier.singleQuote": true,

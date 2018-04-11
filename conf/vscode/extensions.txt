@@ -12,6 +12,7 @@ abusaidm.html-snippets
 alefragnani.project-manager
 bibhasdn.django-html
 bierner.emojisense
+burkeholland.simple-react-snippets
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 codezombiech.gitignore
@@ -34,8 +35,10 @@ haaaad.ansible
 hbenl.vscode-firefox-debug
 jeremyrajan.react-component
 lunaryorn.fish-ide
+mikestead.dotenv
 ms-python.python
 oderwat.indent-rainbow
+pflannery.vscode-versionlens
 redhat.java
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
