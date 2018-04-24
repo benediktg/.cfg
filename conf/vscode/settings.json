@@ -19,6 +19,7 @@
         "vue",
         "xml"
     ],
+    "cdnjs.quoteStyle": "double",
     "closeTag.ignoreTags": "html",
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.autoIndent": true,
@@ -31,9 +32,7 @@
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
-    "editor.rulers": [
-        100
-    ],
+    "editor.rulers": [100],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
@@ -78,14 +77,12 @@
         "**/db.sqlite3": true,
         ".vscode/tags": true
     },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "gitProjectManager.baseProjectsFolders": [
-        "~/Projekte"
-    ],
-    "gitProjectManager.ignoredFolders": [
-        "node_modules"
-    ],
+    "gitProjectManager.baseProjectsFolders": ["~/Projekte"],
+    "gitProjectManager.ignoredFolders": ["node_modules"],
     "gitProjectManager.maxDepthRecursion": 3,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -102,9 +99,7 @@
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.scopes": [
-        "document"
-    ],
+    "gitlens.codeLens.scopes": ["document"],
     "gitlens.keymap": "chorded",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,

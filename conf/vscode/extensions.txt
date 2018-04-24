@@ -4,12 +4,15 @@ DavidAnson.vscode-markdownlint
 DougFinke.vscode-pandoc
 EQuimper.react-native-react-redux
 EditorConfig.EditorConfig
+JakeWilson.vscode-cdnjs
 James-Yu.latex-workshop
 PeterJausovec.vscode-docker
 TeddyDD.fish
 WakaTime.vscode-wakatime
 abusaidm.html-snippets
+alefragnani.Bookmarks
 alefragnani.project-manager
+ban.spellright
 bibhasdn.django-html
 bierner.emojisense
 burkeholland.simple-react-snippets
@@ -50,3 +53,4 @@ waderyan.gitblame
 wayou.vscode-todo-highlight
 webreflection.literally-html
 wholroyd.jinja
+yzhang.markdown-all-in-one
