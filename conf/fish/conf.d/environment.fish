@@ -2,7 +2,11 @@ set -x EDITOR vim
 set -x BROWSER firefox
 set -x GCC_COLORS 'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 set -x GOPATH $HOME/.local/go
-set -x LS_COLORS (dircolors -c | cut -d' ' -f3)
+
+set -x LS_COLORS (dircolors -c | string split ' ')[3]
+if string match -qr '^([\'"]).*\1$' -- $LS_COLORS
+    set LS_COLORS (string match -r '^.(.*).$' $LS_COLORS)[2]
+end
 
 set -l _path_dirs \
     $HOME/.dotfiles/bin \
@@ -10,7 +14,8 @@ set -l _path_dirs \
     $HOME/.local/bin \
     $GOPATH/bin \
     $HOME/.cargo/bin \
-    $HOME/.linuxbrew/bin
+    $HOME/.linuxbrew/bin \
+    /snap/bin
 for d in $_path_dirs
     if test -d $d; and not contains $d $PATH
         set -x PATH $PATH $d
