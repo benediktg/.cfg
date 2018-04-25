@@ -27,8 +27,8 @@
     ~/.config/pip/pip.conf: conf/pip.conf
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
+    ~/.samples: samples
     ~/.editorconfig: conf/editorconfig.ini
-    ~/.eslintrc: conf/eslintrc.json
     ~/.gnupg/gpg-agent.conf: conf/gpg-agent.conf
     ~/.gnupg/gpg.conf: conf/gpg.conf
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
