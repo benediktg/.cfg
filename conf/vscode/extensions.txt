@@ -9,11 +9,9 @@ James-Yu.latex-workshop
 PeterJausovec.vscode-docker
 TeddyDD.fish
 WakaTime.vscode-wakatime
-abusaidm.html-snippets
 alefragnani.Bookmarks
 alefragnani.project-manager
 ban.spellright
-bibhasdn.django-html
 bierner.emojisense
 burkeholland.simple-react-snippets
 christian-kohler.npm-intellisense
@@ -48,9 +46,10 @@ richie5um2.vscode-sort-json
 rubbersheep.gi
 sidthesloth.html5-boilerplate
 techer.open-in-browser
+thebarkman.vscode-djaneiro
 timonwong.shellcheck
-waderyan.gitblame
 wayou.vscode-todo-highlight
 webreflection.literally-html
 wholroyd.jinja
+wix.vscode-import-cost
 yzhang.markdown-all-in-one

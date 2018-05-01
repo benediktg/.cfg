@@ -100,6 +100,7 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.codeLens.scopes": ["document"],
+    "gitlens.currentLine.enabled": false,
     "gitlens.keymap": "chorded",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
