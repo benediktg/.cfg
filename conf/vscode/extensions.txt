@@ -6,6 +6,7 @@ EQuimper.react-native-react-redux
 EditorConfig.EditorConfig
 JakeWilson.vscode-cdnjs
 James-Yu.latex-workshop
+MS-CEINTL.vscode-language-pack-de
 PeterJausovec.vscode-docker
 TeddyDD.fish
 WakaTime.vscode-wakatime
@@ -38,7 +39,6 @@ jeremyrajan.react-component
 lunaryorn.fish-ide
 mikestead.dotenv
 ms-python.python
-oderwat.indent-rainbow
 pflannery.vscode-versionlens
 redhat.java
 redhat.vscode-yaml

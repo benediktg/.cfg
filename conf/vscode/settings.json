@@ -32,16 +32,20 @@
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
     "emmet.includeLanguages": {
+        "django-html": "html",
         "javascript": "javascriptreact",
         "vue-html": "html"
     },
     "eslint.autoFixOnSave": true,
     "eslint.packageManager": "yarn",
+    "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": true,
     "files.associations": {
         "**/*_vars/**/*.yml": "ansible",
@@ -81,8 +85,12 @@
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "gitProjectManager.baseProjectsFolders": ["~/Projekte"],
-    "gitProjectManager.ignoredFolders": ["node_modules"],
+    "gitProjectManager.baseProjectsFolders": [
+        "~/Projekte"
+    ],
+    "gitProjectManager.ignoredFolders": [
+        "node_modules"
+    ],
     "gitProjectManager.maxDepthRecursion": 3,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -99,7 +107,9 @@
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.scopes": ["document"],
+    "gitlens.codeLens.scopes": [
+        "document"
+    ],
     "gitlens.currentLine.enabled": false,
     "gitlens.keymap": "chorded",
     "html.format.endWithNewline": true,
@@ -151,5 +161,6 @@
     "window.restoreFullscreen": true,
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.startupEditor": "none"
 }
