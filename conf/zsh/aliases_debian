@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# server
-alias www='sudo -u www-data'
-alias agu='sudo apt update && sudo aptitude safe-upgrade && sudo checkrestart'
-alias aguu='sudo apt update && sudo apt full-upgrade && sudo checkrestart'
