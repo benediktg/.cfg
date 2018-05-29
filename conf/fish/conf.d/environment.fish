@@ -8,17 +8,17 @@ if string match -qr '^([\'"]).*\1$' -- $LS_COLORS
     set LS_COLORS (string match -r '^.(.*).$' $LS_COLORS)[2]
 end
 
+set -x PATH /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /bin /sbin
 set -l _path_dirs \
-    $HOME/.dotfiles/bin \
-    $HOME/bin \
-    $HOME/.local/bin \
-    $GOPATH/bin \
     $HOME/.cargo/bin \
-    $HOME/.linuxbrew/bin \
-    /snap/bin
+    $GOPATH/bin \
+    /snap/bin \
+    $HOME/.dotfiles/bin \
+    $HOME/.local/bin \
+    $HOME/bin
 for d in $_path_dirs
     if test -d $d; and not contains $d $PATH
-        set -x PATH $PATH $d
+        set PATH $d $PATH
     end
 end
 
