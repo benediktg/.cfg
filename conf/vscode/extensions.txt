@@ -1,4 +1,3 @@
-CoenraadS.bracket-pair-colorizer
 Compulim.compulim-vscode-closetag
 DavidAnson.vscode-markdownlint
 DougFinke.vscode-pandoc
@@ -8,12 +7,10 @@ JakeWilson.vscode-cdnjs
 James-Yu.latex-workshop
 MS-CEINTL.vscode-language-pack-de
 PeterJausovec.vscode-docker
-TeddyDD.fish
 WakaTime.vscode-wakatime
 alefragnani.Bookmarks
 alefragnani.project-manager
 ban.spellright
-bierner.emojisense
 burkeholland.simple-react-snippets
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -23,7 +20,6 @@ dbaeumer.vscode-eslint
 deerawan.vscode-dash
 deerawan.vscode-hasher
 donjayamanne.githistory
-eamodio.gitlens
 ecmel.vscode-html-css
 eg2.tslint
 eg2.vscode-npm-script
@@ -45,6 +41,7 @@ redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rubbersheep.gi
 sidthesloth.html5-boilerplate
+skyapps.fish-vscode
 techer.open-in-browser
 thebarkman.vscode-djaneiro
 timonwong.shellcheck

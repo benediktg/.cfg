@@ -92,26 +92,6 @@
         "node_modules"
     ],
     "gitProjectManager.maxDepthRecursion": 3,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": true,
-        "suppressWelcomeNotice": true
-    },
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.scopes": [
-        "document"
-    ],
-    "gitlens.currentLine.enabled": false,
-    "gitlens.keymap": "chorded",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.maxPreserveNewLines": 3,
