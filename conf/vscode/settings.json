@@ -19,7 +19,6 @@
         "vue",
         "xml"
     ],
-    "cdnjs.quoteStyle": "double",
     "closeTag.ignoreTags": "html",
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.autoIndent": true,
@@ -32,9 +31,7 @@
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
-    "editor.rulers": [
-        100
-    ],
+    "editor.rulers": [100],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
@@ -50,13 +47,15 @@
     "files.associations": {
         "**/*_vars/**/*.yml": "ansible",
         "**/*ansible*/**/*.yml": "ansible",
-        "**/defautls/**/*": "ansible",
+        "**/defaults/**/*": "ansible",
         "**/handler/*.yml": "ansible",
         "**/inventory/*/*": "ansible",
         "**/playbooks/**/*.yml": "ansible",
         "**/roles/**/*.yml": "ansible",
         "**/tasks/**/*.yml": "ansible",
-        "**/vars/**/*.yml": "ansible"
+        "**/templates/**/*.html": "django-html",
+        "**/vars/**/*.yml": "ansible",
+        "*.html": "html"
     },
     "files.autoSave": "onFocusChange",
     "files.exclude": {
@@ -85,12 +84,8 @@
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "gitProjectManager.baseProjectsFolders": [
-        "~/Projekte"
-    ],
-    "gitProjectManager.ignoredFolders": [
-        "node_modules"
-    ],
+    "gitProjectManager.baseProjectsFolders": ["~/Projekte"],
+    "gitProjectManager.ignoredFolders": ["node_modules"],
     "gitProjectManager.maxDepthRecursion": 3,
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,

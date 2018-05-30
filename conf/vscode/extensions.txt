@@ -3,7 +3,6 @@ DavidAnson.vscode-markdownlint
 DougFinke.vscode-pandoc
 EQuimper.react-native-react-redux
 EditorConfig.EditorConfig
-JakeWilson.vscode-cdnjs
 James-Yu.latex-workshop
 MS-CEINTL.vscode-language-pack-de
 PeterJausovec.vscode-docker
@@ -48,5 +47,4 @@ timonwong.shellcheck
 wayou.vscode-todo-highlight
 webreflection.literally-html
 wholroyd.jinja
-wix.vscode-import-cost
 yzhang.markdown-all-in-one
