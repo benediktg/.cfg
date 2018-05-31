@@ -1,9 +1,7 @@
 Compulim.compulim-vscode-closetag
 DavidAnson.vscode-markdownlint
-DougFinke.vscode-pandoc
 EQuimper.react-native-react-redux
 EditorConfig.EditorConfig
-James-Yu.latex-workshop
 MS-CEINTL.vscode-language-pack-de
 PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
@@ -17,7 +15,6 @@ codezombiech.gitignore
 cssho.vscode-svgviewer
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
-deerawan.vscode-hasher
 donjayamanne.githistory
 ecmel.vscode-html-css
 eg2.tslint
@@ -27,7 +24,6 @@ felipecaputo.git-project-manager
 felixfbecker.php-debug
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-formulahendry.code-runner
 haaaad.ansible
 hbenl.vscode-firefox-debug
 jeremyrajan.react-component
@@ -35,16 +31,10 @@ lunaryorn.fish-ide
 mikestead.dotenv
 ms-python.python
 pflannery.vscode-versionlens
-redhat.java
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
-rubbersheep.gi
-sidthesloth.html5-boilerplate
 skyapps.fish-vscode
-techer.open-in-browser
 thebarkman.vscode-djaneiro
-timonwong.shellcheck
-wayou.vscode-todo-highlight
 webreflection.literally-html
 wholroyd.jinja
 yzhang.markdown-all-in-one
