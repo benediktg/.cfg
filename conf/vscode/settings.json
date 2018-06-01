@@ -89,6 +89,7 @@
     "html.suggest.angular1": false,
     "html.suggest.ionic": false,
     "javascript.implicitProjectConfig.checkJs": true,
+    "prettier.eslintIntegration": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "search.useIgnoreFiles": true,
