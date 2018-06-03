@@ -7,6 +7,3 @@
 [submodule "conf/zsh/liquidprompt"]
 	path = conf/zsh/liquidprompt
 	url = https://github.com/nojhan/liquidprompt.git
-[submodule "scripts"]
-	path = bin
-	url = https://github.com/benediktg/scripts.git

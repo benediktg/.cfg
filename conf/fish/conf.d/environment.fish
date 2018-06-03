@@ -13,7 +13,7 @@ set -l _path_dirs \
     $HOME/.cargo/bin \
     $GOPATH/bin \
     /snap/bin \
-    $HOME/.dotfiles/bin \
+    $HOME/.dotfiles/scripts \
     $HOME/.local/bin \
     $HOME/bin
 for d in $_path_dirs

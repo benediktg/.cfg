@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+
+import collections
+import shutil
+import sys
+
+import configparser
+
+
+def main():
+    shutil.copy2(sys.argv[1], sys.argv[1] + '.bak')
+    config = configparser.ConfigParser({}, collections.OrderedDict)
+    config.read(sys.argv[1])
+    # Order the content of each section alphabetically
+    for section in config._sections:
+        config._sections[section] = collections.OrderedDict(sorted(
+            config._sections[section].items(),
+            key=lambda t: t[0],
+        ))
+    # Order all sections alphabetically
+    config._sections = collections.OrderedDict(sorted(
+        config._sections.items(), key=lambda t: t[0]
+    ))
+    # Write back ini file
+    with open(sys.argv[1], 'w') as ini:
+        config.write(ini)
+
+
+if __name__ == '__main__':
+    main()

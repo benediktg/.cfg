@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+import re
+import sys
+
+import nltk
+from bs4 import BeautifulSoup, SoupStrainer
+
+
+def parse_and_count(filename):
+    parse_only = SoupStrainer('section', class_='')
+    with open(filename) as document:
+        # text processing
+        raw = BeautifulSoup(document, 'lxml', parse_only=parse_only).get_text()
+        tokens = nltk.word_tokenize(raw)
+        text = nltk.Text(tokens)
+        # remove punctuation, count raw words
+        nonPunct = re.compile('.*[A-Za-z].*')
+        raw_words = [w for w in text if nonPunct.match(w)]
+        return len(raw_words)
+
+
+def main():
+    result = [
+        '{count:6d} {name}'.format(count=parse_and_count(f), name=f)
+        for f in sys.argv[1:]
+    ]
+    print('\n'.join(result))
+
+
+if __name__ == '__main__':
+    main()

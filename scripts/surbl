@@ -1,0 +1,49 @@
+#!/bin/sh
+########################################################################
+#
+# surbl
+# $Id: surbl,v 1.3 2016/08/17 23:16:51 elias Exp $
+#
+# Send queries to SURBL.
+#
+# Requires dig and gawk. (Does the good old awk perform bitwise ops?)
+#
+########################################################################
+
+if test -t 1
+then
+    term=1
+else
+    term=0
+fi
+
+for domain 
+do
+    result=`dig ${domain}.multi.surbl.org |
+    sed -e '/^;/d' -e '/^\s*$/d' -e '/SOA/d' -e 's/.*\.\(.*$\)/\1/'`
+    echo $domain $result
+done |
+gawk '
+BEGIN { 
+  term = '$term'
+  if (term) {
+    red="\033[1;31m"
+    green="\033[1;32m"
+    norm="\033[0m"
+  } else {
+    red=""
+    green=""
+    norm=""
+  }
+}
+{ 
+  if(!$2) $2 = 0
+  printf("%s\t", $1)
+  if ($2)           { printf("%sLISTED:%s ", red, norm) }
+  if (and($2, 8))   { printf("PH ") }
+  if (and($2, 16))  { printf("MW ") }
+  if (and($2, 64))  { printf("ABUSE ") }
+  if (and($2, 128)) { printf("CR ") }
+  if (!$2)          { printf("%sokay%s", green, norm) }
+  printf("\n")
+}'
