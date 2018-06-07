@@ -39,6 +39,7 @@
     },
     "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
     "files.associations": {
         "**/*_vars/**/*.yml": "ansible",
         "**/*ansible*/**/*.yml": "ansible",
@@ -80,7 +81,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "gitProjectManager.baseProjectsFolders": ["~/Projekte"],
-    "gitProjectManager.ignoredFolders": ["node_modules"],
+    "gitProjectManager.ignoredFolders": ["node_modules", ".venv"],
     "gitProjectManager.maxDepthRecursion": 3,
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
@@ -89,10 +90,13 @@
     "html.suggest.angular1": false,
     "html.suggest.ionic": false,
     "javascript.implicitProjectConfig.checkJs": true,
+    "npm-intellisense.importLinebreak": "\n",
     "prettier.eslintIntegration": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "search.useIgnoreFiles": true,
+    "standard.enable": false,
+    "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "default",
@@ -100,5 +104,6 @@
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.feedback.visible": false
 }

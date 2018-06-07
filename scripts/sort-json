@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+
+import argparse
+import json
+import sys
+
+
+def main(args):
+    if args.infile:
+        with open(args.infile, 'r') as f:
+            jsonobj = json.load(f)
+    else:
+        jsonobj = json.load(sys.stdin)
+
+    outfile = args.infile if args.infile and args.inplace else args.outfile
+    if outfile:
+        with open(outfile, 'w') as f:
+            json.dump(jsonobj, f, indent=args.indent, sort_keys=True)
+            f.write('\n')
+    else:
+        json.dump(jsonobj, sys.stdout, indent=args.indent, sort_keys=True)
+        sys.stdout.write('\n')
+
+
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser('sort json file alphabetically')
+    ap.add_argument(
+        '-i', '--infile', nargs='?', help='file to read from (default: stdin)')
+    ap.add_argument(
+        '-o', '--outfile', nargs='?', help='file to write to (default: stdout)')
+    ap.add_argument(
+        '-p', '--inplace', action='store_true', help='write to input file')
+    ap.add_argument(
+        '-n', '--indent', nargs='?', default=4, type=int, help='indent level')
+    main(ap.parse_args())
