@@ -26,4 +26,4 @@ Plug 'sjl/gundo.vim'
 Plug 'w0rp/ale'
 Plug 'luochen1990/rainbow'
 
-Plug 'zeis/vim-kolor'
+Plug 'altercation/vim-colors-solarized'

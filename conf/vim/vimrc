@@ -82,7 +82,7 @@ call plug#begin('~/.vim/plugged')
 runtime plugins.vim
 call plug#end()
 
-colorscheme kolor
+colorscheme solarized
 
 " Markdown "
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown

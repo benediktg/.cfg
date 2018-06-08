@@ -103,6 +103,7 @@
     "window.restoreFullscreen": true,
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Solarized Dark",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false
