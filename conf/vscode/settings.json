@@ -2,6 +2,7 @@
     "auto-close-tag.SublimeText3Mode": true,
     "auto-rename-tag.activationOnLanguage": [
         "blade",
+        "django-html",
         "ejs",
         "handlebars",
         "html",
