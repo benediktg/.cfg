@@ -1,19 +1,29 @@
 {
-    "auto-close-tag.SublimeText3Mode": true,
-    "auto-rename-tag.activationOnLanguage": [
-        "blade",
+    "auto-close-tag.fullMode": true,
+    "auto-close-tag.activationOnLanguage": [
         "django-html",
-        "ejs",
-        "handlebars",
         "html",
         "javascript",
         "javascriptreact",
         "jinja",
-        "liquid",
         "markdown",
         "php",
         "plaintext",
-        "razor",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "xml"
+    ],
+    "auto-rename-tag.activationOnLanguage": [
+        "django-html",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "jinja",
+        "markdown",
+        "php",
+        "plaintext",
+        "typescript",
         "typescriptreact",
         "vue",
         "xml"
