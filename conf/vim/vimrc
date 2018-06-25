@@ -1,3 +1,5 @@
+runtime defaults.vim
+
 set nocompatible
 set backspace=indent,eol,start
 set encoding=utf-8
@@ -15,7 +17,9 @@ set softtabstop=4
 if v:version >= 800
     set breakindent
 endif
-set formatoptions=l
+set formatoptions+=lor
+set iskeyword-=_
+set nrformats=
 set lbr
 set showbreak=**\ \
 
@@ -40,7 +44,7 @@ set wildmode=longest:full,full
 set wildignore+=tags,.*.un~,*.pyc
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico,*.tif
 set wildignore+=*.pdf,*.psd,*.xcf
-set wildignore+=node_modules/*,bower_components/*
+set wildignore+=node_modules/*,bower_components/*,site-packages/*
 set lazyredraw
 set splitright
 set splitbelow
@@ -51,10 +55,6 @@ set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
-
-set iskeyword-=_
-set nrformats=
-set formatoptions+=roq
 
 " Mappings "
 let mapleader = 's'
