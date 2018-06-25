@@ -1,34 +1,5 @@
 {
     "auto-close-tag.fullMode": true,
-    "auto-close-tag.activationOnLanguage": [
-        "django-html",
-        "html",
-        "javascript",
-        "javascriptreact",
-        "jinja",
-        "markdown",
-        "php",
-        "plaintext",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "xml"
-    ],
-    "auto-rename-tag.activationOnLanguage": [
-        "django-html",
-        "html",
-        "javascript",
-        "javascriptreact",
-        "jinja",
-        "markdown",
-        "php",
-        "plaintext",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "xml"
-    ],
-    "closeTag.ignoreTags": "html",
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.autoIndent": true,
     "editor.cursorBlinking": "solid",
@@ -39,7 +10,10 @@
     "editor.minimap.enabled": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "boundary",
-    "editor.rulers": [80, 100],
+    "editor.rulers": [
+        80,
+        100
+    ],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
     "editor.wrappingIndent": "indent",
@@ -91,8 +65,13 @@
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "gitProjectManager.baseProjectsFolders": ["~/Projekte"],
-    "gitProjectManager.ignoredFolders": ["node_modules", ".venv"],
+    "gitProjectManager.baseProjectsFolders": [
+        "~/Projekte"
+    ],
+    "gitProjectManager.ignoredFolders": [
+        "node_modules",
+        ".venv"
+    ],
     "gitProjectManager.maxDepthRecursion": 3,
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,

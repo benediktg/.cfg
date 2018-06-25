@@ -10,7 +10,6 @@ chenxsan.vscode-standardjs
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 codezombiech.gitignore
-Compulim.compulim-vscode-closetag
 cssho.vscode-svgviewer
 dbaeumer.vscode-eslint
 donjayamanne.githistory
