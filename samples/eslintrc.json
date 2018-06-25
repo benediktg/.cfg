@@ -24,7 +24,7 @@
         "valid-typeof": 1,
         "indent": [2, 4],
         "linebreak-style": [2, "unix"],
-        "max-len": [2, 100],
+        "max-len": [2, 99],
         "no-console": 1,
         "no-const-assign": 1,
         "no-this-before-super": 1,
