@@ -24,7 +24,9 @@
     ~/.config/git/config: conf/gitconfig.ini
     ~/.config/git/excludes: conf/gitignore_global
     ~/.config/liquidpromptrc: conf/liquidpromptrc
+    ~/.config/pep8: conf/pycodestyle.ini
     ~/.config/pip/pip.conf: conf/pip.conf
+    ~/.config/pycodestyle: conf/pycodestyle.ini
     ~/.curlrc: conf/curlrc
     ~/.dotfiles: ''
     ~/.samples: samples
@@ -33,6 +35,7 @@
     ~/.gnupg/gpg.conf: conf/gpg.conf
     ~/.gnupg/gpgsm.conf: conf/gpgsm.conf
     ~/.gradle/init.d/buildscan.gradle: conf/gradle-init-buildscan.groovy
+    ~/.isort.cfg: conf/isort.ini
     ~/.lessfilter: conf/lessfilter
     ~/.npmrc: conf/npmrc.ini
     ~/.ssh/config: conf/ssh-config
