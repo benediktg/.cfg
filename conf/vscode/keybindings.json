@@ -51,5 +51,13 @@
         "key": "alt+[Period]",
         "command": "-gitlens.key..",
         "when": "gitlens:key:."
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "projectManager.listProjects"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "-projectManager.listProjects"
     }
 ]
