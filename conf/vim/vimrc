@@ -72,7 +72,7 @@ nnoremap + :
 
 augroup autosourcing
     autocmd!
-    autocmd BufWritePost .vimrc source %
+    autocmd BufWritePost vimrc source %
 augroup END
 
 nnoremap <F5> :GundoToggle<CR>
@@ -83,6 +83,7 @@ runtime plugins.vim
 call plug#end()
 
 colorscheme solarized
+set background=light
 
 " Markdown "
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
