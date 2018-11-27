@@ -4,3 +4,4 @@ set fish_greeting
 abbr g git
 abbr syc systemctl
 abbr sycu systemctl --user
+abbr zps sudo zypper ps -s

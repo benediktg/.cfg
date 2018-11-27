@@ -24,6 +24,5 @@ Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'sjl/gundo.vim'
 Plug 'w0rp/ale'
-Plug 'luochen1990/rainbow'
 
 Plug 'altercation/vim-colors-solarized'

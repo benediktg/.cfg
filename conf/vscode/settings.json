@@ -52,6 +52,7 @@
     "npm-intellisense.importLinebreak": "\n",
     "prettier.eslintIntegration": true,
     "projectManager.git.baseFolders": ["$home/Projekte"],
+    "python.linting.banditEnabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "search.useIgnoreFiles": true,

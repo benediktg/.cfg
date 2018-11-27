@@ -1,0 +1,6 @@
+set guioptions-=T
+
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost gvimrc source %
+augroup END
