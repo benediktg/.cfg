@@ -26,8 +26,7 @@ Host *.neptun.g5r.eu git.g5r.eu
 
 Host *.tu-chemnitz.de !login.tu-chemnitz.de !gitlab.hrz.tu-chemnitz.de
     User geib
-    #ProxyJump login.tu-chemnitz.de
-    ProxyCommand ssh geib@login.tu-chemnitz.de -W %h:%p
+    ProxyJump login.tu-chemnitz.de
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
 
