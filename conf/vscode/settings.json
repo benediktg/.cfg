@@ -1,5 +1,7 @@
 {
     "breadcrumbs.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
     "editor.autoIndent": true,
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "'Fira Code', Hack, monospace",
@@ -46,8 +48,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "html.suggest.angular1": false,
-    "html.suggest.ionic": false,
     "javascript.implicitProjectConfig.checkJs": true,
     "npm-intellisense.importLinebreak": "\n",
     "prettier.eslintIntegration": true,
