@@ -8,18 +8,16 @@ if string match -qr '^([\'"]).*\1$' -- $LS_COLORS
     set LS_COLORS (string match -r '^.(.*).$' $LS_COLORS)[2]
 end
 
-set -x PATH /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /bin /sbin
-set -l _path_dirs \
-    $HOME/.cargo/bin \
-    $GOPATH/bin \
-    /snap/bin \
-    $HOME/.dotfiles/scripts \
+set -x PATH \
+    $HOME/bin \
     $HOME/.local/bin \
-    $HOME/bin
-for d in $_path_dirs
-    if test -d $d; and not contains $d $PATH
-        set PATH $d $PATH
-    end
-end
-
-setup_universal_variables
+    $HOME/.dotfiles/scripts \
+    /snap/bin \
+    $GOPATH/bin \
+    $HOME/.cargo/bin \
+    /usr/local/bin \
+    /usr/local/sbin \
+    /usr/bin \
+    /usr/sbin \
+    /bin \
+    /sbin

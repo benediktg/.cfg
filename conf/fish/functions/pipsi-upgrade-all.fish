@@ -1,7 +1,4 @@
 function pipsi-upgrade-all
-    pipsi list \
-        | ag 'Package ' \
-        | cut -d' ' -f4 \
-        | cut -d'"' -f2 \
-        | xargs -L1 pipsi upgrade
+    find ~/.local/venvs -path '*/bin/pip' -exec {} install -U pip \;
+    pipsi list | grep 'Package "' | cut -d'"' -f2 | xargs -L1 pipsi upgrade
 end

@@ -18,10 +18,10 @@ function fish_prompt
     end
     if set -qU fish_is_ssh_connection
         if not set -qg FISH_COLOR_HOST
-            set -g FISH_COLOR_HOST (hostname | sha256sum | head -c 6)
+            set -g FISH_COLOR_HOST (echo -n $hostname | sha256sum | head -c 6)
         end
         set_color $FISH_COLOR_HOST
-        echo -n '@'(hostname)
+        echo -n '@'(prompt_hostname)
     end
 
     set_color normal
