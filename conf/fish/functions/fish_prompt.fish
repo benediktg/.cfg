@@ -14,9 +14,9 @@ function fish_prompt
     set_color normal
 
     if set -qx SSH_CONNECTION
-        set -U fish_is_ssh_connection
+        set -x FISH_IS_SSH_CONNECTION
     end
-    if set -qU fish_is_ssh_connection
+    if set -qx FISH_IS_SSH_CONNECTION
         if not set -qg FISH_COLOR_HOST
             set -g FISH_COLOR_HOST (echo -n $hostname | sha256sum | head -c 6)
         end
