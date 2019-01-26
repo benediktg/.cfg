@@ -7,6 +7,7 @@ SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_cdt:cd\x20\x28mktemp\x20\x2dd\x29
+SETUVAR _fish_abbr_kin:kinit\x20geib\x20\x2dR\x3b\x20or\x20kinit\x20geib
 SETUVAR _fish_abbr_syc:systemctl
 SETUVAR _fish_abbr_sycu:systemctl\x20\x2d\x2duser
 SETUVAR _fish_abbr_zps:sudo\x20zypper\x20ps\x20\x2ds
