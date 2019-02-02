@@ -64,6 +64,7 @@
     "python.sortImports.path": "/usr/bin/isort",
     "search.useIgnoreFiles": true,
     "standard.enable": false,
+    "stylelint.enable": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.cursorBlinking": true,
