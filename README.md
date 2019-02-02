@@ -1,1 +1,10 @@
-My dotfiles – previously managed here: https://gitlab.com/benediktg/.konf
+# My dotfiles
+
+managed by GNU stow
+
+## Setup
+
+```sh
+./setup.fish
+stow base
+```

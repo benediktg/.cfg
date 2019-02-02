@@ -11,7 +11,6 @@ end
 set -x PATH \
     $HOME/bin \
     $HOME/.local/bin \
-    $HOME/.dotfiles/scripts \
     /snap/bin \
     $GOPATH/bin \
     $HOME/.cargo/bin \
