@@ -3,7 +3,7 @@ all: stow
 
 .PHONY: stow
 stow:
-	@stow -t ~ -S base bin fish vim
+	@stow -t ~ -S base bin fish git vim
 	fish -c install-diff-so-fancy
 	@echo "Run the following tasks:"
 	@echo fish -c install-fundle
@@ -18,7 +18,7 @@ desktop: stow
 
 .PHONY: unstow
 unstow:
-	@stow -t ~ -D base bin fish vim desktop vscode
+	@stow -t ~ -D base bin fish git vim
 	-rm ~/.config/fish/functions/fundle.fish
 	-rm -rf ~/.config/fish/fundle
 	-rm ~/.vim/autoload/plug.vim
