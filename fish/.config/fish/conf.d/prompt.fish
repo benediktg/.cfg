@@ -14,7 +14,7 @@ if status is-interactive
     set -g fish_color_error dc322f
     set -g fish_color_escape 'bryellow' '--bold'
     set -g fish_color_history_current --bold
-    set -g fish_color_host normal
+    set -g fish_color_host (echo -n $hostname | sha256sum | head -c 6)
     set -g fish_color_match '--background=brblue'
     set -g fish_color_normal normal
     set -g fish_color_operator bryellow
