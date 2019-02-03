@@ -1,29 +1,30 @@
 function extract
-    if [ $argv ]
-        if [ -f $argv ]
-            switch $argv
-                case '*.tar' '*.tar.bz2' '*.tar.gz' '*.tar.xz' '*.tbz2' '*.tgz'
-                    tar -xvf $argv
-                case '*.bz2'
-                    bunzip2 $argv
-                case '*.rar'
-                    unrar x $argv
-                case '*.gz'
-                    gunzip $argv
-                case '*.zip'
-                    unzip $argv
-                case '*.Z'
-                    uncompress $argv
-                case '*.7z'
-                    7z x $argv
-                case '*'
-                    printf "\"%s\" cannot be extracted with this command\n" $argv
-            end
-        else
-            echo '"$argv" is not a valid file'
-        end
-    else
+    if not test $argv
         echo 'This command expects a parameter'
+        return 1
+    end
+    if test ! -f "$argv"
+        echo '"$argv" is not a valid file'
+        return 1
+    end
+    switch "$argv"
+        case '*.tar' '*.tar.bz2' '*.tar.gz' '*.tar.xz' '*.tbz2' '*.tgz'
+            tar -xvf $argv
+        case '*.bz2'
+            bunzip2 $argv
+        case '*.rar'
+            unrar x $argv
+        case '*.gz'
+            gunzip $argv
+        case '*.zip'
+            unzip $argv
+        case '*.Z'
+            uncompress $argv
+        case '*.7z'
+            7z x $argv
+        case '*'
+            printf "\"%s\" cannot be extracted with this command\n" $argv
+            return 1
     end
 end
 

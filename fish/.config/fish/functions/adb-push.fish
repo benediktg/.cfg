@@ -8,13 +8,14 @@ function adb-push
     set -l target (basename $argv[1])
     set -l destination (echo $argv[2] | grep '/$')
     # If ${destination} ends with '/', remove the trailing '/'
-    if test -n $destination
+    if test -n "$destination"
         set destination (string trim -r -c '/' $destination)
     end
 
     # If ${source} is a directory, make directories on device before pushing them
-    if test -d $source
-        cd $source; or exit 1
+    if test -d "$source"
+        cd $source
+        or exit 1
         cd ..
         set target $target/
         find $target -type d -exec adb shell mkdir $destination/{} \;
