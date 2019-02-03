@@ -1,5 +1,5 @@
 .config/fish/completions/fundle.fish
 .config/fish/completions/pip.fish
-.config/fish/fishd.*
+.config/fish/fishd.+
 .config/fish/functions/fundle.fish
-.config/fish/fundle/
+.config/fish/fundle
