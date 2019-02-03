@@ -3,3 +3,61 @@
 .config/fish/fishd.+
 .config/fish/functions/fundle.fish
 .config/fish/fundle
+
+
+
+\.DS_Store
+\.stow-local-ignore
+\.*.example
+^/@.*
+README.*
+COPYING
+LICENSE.*
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+\.\#.+       # emacs lock files
+
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+\.fuse_hidden.*
+
+# KDE directory preferences
+\.directory
+
+# Linux trash folder which might appear on any partition or disk
+\.Trash-.*
+
+# .nfs files are created when an open file is removed but is still being accessed
+\.nfs.*
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Temporary
+\.netrwhist
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*\.un~
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+.+\.py[cod]
+
+.+\.bak
+.+\.gho
+.+\.ori
+.+\.orig
+.+\.tmp

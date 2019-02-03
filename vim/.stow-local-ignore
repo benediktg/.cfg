@@ -1,13 +1,5 @@
-.config/Code/User/globalStorage
-.config/Code/User/gpm-recentItems.json
-.config/Code/User/projects_cache_git.json
-.config/Code/User/projects.json
-.config/Code/User/sync.lock
-.config/Code/User/syncing.json
-.config/Code/User/syncLocalSettings.json
-.config/Code/User/syncSummary.txt
-.config/Code/User/vsicons.settings.json
-.config/Code/User/workspaceStorage
+.vim/autoload
+.vim/plugged
 
 
 
