@@ -20,3 +20,7 @@ set -x PATH \
     /usr/sbin \
     /bin \
     /sbin
+
+if is_ssh >/dev/null
+    set -x FISH_IS_SSH_CONNECTION true
+end
