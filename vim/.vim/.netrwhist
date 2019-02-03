@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/etc/firehol'
-let g:netrw_dirhist_2='/etc/firehol/services'
-let g:netrw_dirhist_3='/etc/zypp/repos.d'
-let g:netrw_dirhist_4='/etc/zypp/systemCheck.d'
-let g:netrw_dirhist_5='/home/benedikt2/dotfiles/conf/fish/fundle/fisherman/z/conf.d'
-let g:netrw_dirhist_6='/home/benedikt2/Projekte/urz/dacs4-frontend/dacsdb/forms'
-let g:netrw_dirhist_7='/home/benedikt2/dotfiles/conf/fish/completions'
