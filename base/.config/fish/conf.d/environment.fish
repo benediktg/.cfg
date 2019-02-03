@@ -20,3 +20,5 @@ set -x PATH \
     /usr/sbin \
     /bin \
     /sbin
+
+setup_universal_variables
