@@ -1,11 +1,11 @@
 function is_ssh
-    if string match -qr '^[1-9][0-9]*$' "$argv[1]"
-        set p $argv[1]
+    if string match -qr '^[1-9][0-9]*$' -- "$argv[1]"
+        set pid $argv[1]
     else
-        set p $fish_pid
+        set pid $fish_pid
     end
-    cat /proc/$p/stat | read pid name x ppid y
-    if string match -qr 'sshd' "$name"
+    ps -o ppid=,cmd= $pid | read ppid name
+    if string match -qr 'sshd' -- "$name"
         echo "Is SSH: $pid $name"
         return 0
     end
