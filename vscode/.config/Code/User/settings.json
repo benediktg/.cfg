@@ -1,13 +1,21 @@
 {
+    "[markdown]": {
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.parameterHints.enabled": false,
+        "editor.quickSuggestions": false,
+        "editor.renderWhitespace": "all",
+        "editor.snippetSuggestions": "none"
+    },
     "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": true,
+    "diffEditor.renderSideBySide": false,
     "editor.autoIndent": true,
-    "editor.cursorBlinking": "blink",
+    "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": false,
     "editor.fontFamily": "'Fira Code', Hack, monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
@@ -24,7 +32,7 @@
     "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "onWindowChange",
     "files.exclude": {
         "**/*.min.css": true,
         "**/*.min.js": true,
