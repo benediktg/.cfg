@@ -18,6 +18,7 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
+    "editor.quickSuggestionsDelay": 0,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [80, 99],
     "editor.smoothScrolling": false,
@@ -29,6 +30,8 @@
         "javascript": "javascriptreact",
         "vue-html": "html"
     },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
