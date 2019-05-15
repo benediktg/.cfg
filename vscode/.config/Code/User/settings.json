@@ -6,6 +6,7 @@
         "editor.renderWhitespace": "all",
         "editor.snippetSuggestions": "none"
     },
+    "bracket-pair-colorizer-2.colors": ["Orchid", "LightSkyBlue"],
     "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
@@ -85,7 +86,7 @@
     "window.restoreFullscreen": true,
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 0,
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Default Light+",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,

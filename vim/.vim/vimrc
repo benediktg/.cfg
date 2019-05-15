@@ -106,3 +106,6 @@ if executable('ag')
     cnoreabbrev Ag Ack
     cnoreabbrev AG Ack
 endif
+
+" vimtex "
+let g:polyglot_disabled = ['latex']
