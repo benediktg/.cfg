@@ -4,10 +4,10 @@ set nocompatible
 set backspace=indent,eol,start
 set encoding=utf-8
 set ffs=unix,dos,mac
-syntax enable
 
 " Einrückung, Tabulator "
-filetype indent plugin on
+filetype plugin indent on
+syntax on
 set autoindent
 set smartindent
 set expandtab
@@ -110,4 +110,15 @@ if executable('ag')
 endif
 
 " vimtex "
+let g:tex_flavor = 'latex'
 let g:polyglot_disabled = ['latex']
+
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+
+augroup VimCompletesMeTex
+    autocmd!
+    autocmd FileType tex let b:vcm_omni_pattern = g:vimtex#re#neocomplete
+augroup END
