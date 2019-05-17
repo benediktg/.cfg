@@ -1,4 +1,5 @@
 set guioptions-=T
+set gfn=Monospace\ 11
 
 augroup autosourcing
     autocmd!

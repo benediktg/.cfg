@@ -58,6 +58,7 @@ set nohlsearch
 
 " Mappings "
 let mapleader = 's'
+let maplocalleader = 's'
 
 nmap <Leader>m :set so=999<cr>
 nmap <Leader><Leader>m :set so=0<cr>
@@ -82,6 +83,7 @@ call plug#begin('~/.vim/plugged')
 runtime plugins.vim
 call plug#end()
 
+let g:solarized_menu = 0
 colorscheme solarized
 set background=light
 
