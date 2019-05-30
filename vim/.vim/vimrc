@@ -56,7 +56,7 @@ set ignorecase
 set smartcase
 set nohlsearch
 
-" Mappings "
+" # Mappings {{{
 let mapleader = 's'
 let maplocalleader = 's'
 
@@ -77,10 +77,66 @@ augroup autosourcing
 augroup END
 
 nnoremap <F5> :GundoToggle<CR>
+" }}}
 
 " Plugins "
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
+function! BuildYCM(info)
+    " info is a dictionary with 3 fields
+    " - name:   name of the plugin
+    " - status: 'installed', 'updated', or 'unchanged'
+    " - force:  set on PlugInstall! or PlugUpdate!
+    if a:info.status == 'installed' || a:info.force
+        !./install.py
+    endif
+endfunction
+
 call plug#begin('~/.vim/plugged')
-runtime plugins.vim
+
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+
+Plug 'Quramy/vim-js-pretty-template'
+"Plug 'Valloric/YouCompleteMe', Cond(v:version >= 800, { 'do': function('BuildYCM') })
+Plug 'ajh17/VimCompletesMe'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'isa/vim-matchit'
+Plug 'lervag/vimtex'
+Plug 'ludovicchabant/vim-gutentags', Cond(v:version >= 800)
+Plug 'mattn/emmet-vim'
+Plug 'mileszs/ack.vim'
+Plug 'neomake/neomake'
+Plug 'sheerun/vim-polyglot'
+Plug 'sjl/gundo.vim'
+Plug 'w0rp/ale'
+Plug 'xero/securemodelines'
+
+Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'tag': '*', 'do': './install.sh' })
+"Plug 'neoclide/coc-vimtex', Cond(v:version >= 800, { 'do': 'yarn install --pure-lockfile' })
+
+Plug 'altercation/vim-colors-solarized'
+
 call plug#end()
 
 let g:solarized_menu = 0
@@ -93,6 +149,9 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'json']
 let g:markdown_syntax_conceal = 0
 let g:markdown_minlines = 100
 
+" jsonc "
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " Rainbow parentheses "
 let g:rainbow_active = 1
 
@@ -100,7 +159,7 @@ let g:rainbow_active = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" Ack.vim "
+" # Ack.vim {{{
 if executable('ag')
     let g:ackprg = 'ag --vimgrep --smart-case'
     cnoreabbrev ag Ack
@@ -108,8 +167,9 @@ if executable('ag')
     cnoreabbrev Ag Ack
     cnoreabbrev AG Ack
 endif
+" }}}
 
-" vimtex "
+" # vimtex {{{
 let g:tex_flavor = 'latex'
 let g:polyglot_disabled = ['latex']
 
@@ -122,3 +182,4 @@ augroup VimCompletesMeTex
     autocmd!
     autocmd FileType tex let b:vcm_omni_pattern = g:vimtex#re#neocomplete
 augroup END
+" }}}
