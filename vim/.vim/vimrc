@@ -123,12 +123,9 @@ Plug 'xero/securemodelines'
 Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'tag': '*', 'do': './install.sh' })
 let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 
-Plug 'altercation/vim-colors-solarized'
-
 call plug#end()
 
-let g:solarized_menu = 0
-colorscheme solarized
+colorscheme default
 set background=light
 
 " Markdown "
