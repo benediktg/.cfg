@@ -114,7 +114,6 @@ Plug 'isa/vim-matchit'
 Plug 'lervag/vimtex'
 Plug 'ludovicchabant/vim-gutentags', Cond(v:version >= 800)
 Plug 'mattn/emmet-vim'
-Plug 'mileszs/ack.vim'
 Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'sjl/gundo.vim'
@@ -122,7 +121,7 @@ Plug 'w0rp/ale'
 Plug 'xero/securemodelines'
 
 Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'tag': '*', 'do': './install.sh' })
-"Plug 'neoclide/coc-vimtex', Cond(v:version >= 800, { 'do': 'yarn install --pure-lockfile' })
+let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 
 Plug 'altercation/vim-colors-solarized'
 
@@ -148,17 +147,7 @@ let g:rainbow_active = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" # Ack.vim {{{
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep --smart-case'
-    cnoreabbrev ag Ack
-    cnoreabbrev aG Ack
-    cnoreabbrev Ag Ack
-    cnoreabbrev AG Ack
-endif
-" }}}
-
-" # vimtex {{{
+" vimtex "
 let g:tex_flavor = 'latex'
 let g:polyglot_disabled = ['latex']
 
@@ -166,4 +155,3 @@ augroup VimCompletesMeTex
     autocmd!
     autocmd FileType tex let b:vcm_omni_pattern = g:vimtex#re#neocomplete
 augroup END
-" }}}
