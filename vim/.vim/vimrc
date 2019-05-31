@@ -123,9 +123,11 @@ Plug 'xero/securemodelines'
 Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'tag': '*', 'do': './install.sh' })
 let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 
+Plug 'NLKNguyen/papercolor-theme'
+
 call plug#end()
 
-colorscheme default
+colorscheme PaperColor
 set background=light
 
 " Markdown "
