@@ -1,3 +1,3 @@
-function g --wraps git
-    git $argv;
+function g -w git
+    git $argv
 end
