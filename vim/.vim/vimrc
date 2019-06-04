@@ -120,7 +120,7 @@ Plug 'sjl/gundo.vim'
 Plug 'w0rp/ale'
 Plug 'xero/securemodelines'
 
-Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'tag': '*', 'do': './install.sh' })
+Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'do': { -> coc#util#install() } })
 let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 
 Plug 'NLKNguyen/papercolor-theme'
