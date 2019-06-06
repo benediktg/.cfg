@@ -1,3 +1,4 @@
+" # Default settings {{{1
 runtime defaults.vim
 
 set nocompatible
@@ -49,14 +50,16 @@ set lazyredraw
 set splitright
 set splitbelow
 set hidden
+set foldmethod=marker
 
 " Suche "
 set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
+" }}}1
 
-" # Mappings {{{
+" # Mappings {{{1
 let mapleader = 's'
 let maplocalleader = 's'
 
@@ -79,19 +82,23 @@ augroup END
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 
-" Plugins "
+" # Plugins {{{1
+" automatically install vim-plug {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
-function! Cond(cond, ...)
-  let opts = get(a:000, 0, {})
-  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
-endfunction
+" }}}
 
 call plug#begin('~/.vim/plugged')
+
+" Cond function {{{
+function! Cond(cond, ...)
+    let opts = get(a:000, 0, {})
+    return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+" }}}
 
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -129,7 +136,9 @@ call plug#end()
 
 colorscheme PaperColor
 set background=light
+" }}}1
 
+" # Plugin settings {{{1
 " Markdown "
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'json']
@@ -149,8 +158,20 @@ autocmd FileType html,css EmmetInstall
 " vimtex "
 let g:tex_flavor = 'latex'
 let g:polyglot_disabled = ['latex']
+let g:vimtex_format_enabled = 1
 
 augroup VimCompletesMeTex
     autocmd!
     autocmd FileType tex let b:vcm_omni_pattern = g:vimtex#re#neocomplete
 augroup END
+
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+" }}}1
+
+" # start server {{{1
+if empty(v:servername) && exists('*remote_startserver')
+    call remote_startserver('VIM')
+endif
+" }}}1
