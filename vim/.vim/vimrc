@@ -119,6 +119,7 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'isa/vim-matchit'
+Plug 'junegunn/gv.vim'
 Plug 'lervag/vimtex'
 Plug 'ludovicchabant/vim-gutentags', Cond(v:version >= 800)
 Plug 'mattn/emmet-vim'
