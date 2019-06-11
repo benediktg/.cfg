@@ -116,6 +116,7 @@ Plug 'tpope/vim-vinegar'
 
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'ajh17/VimCompletesMe'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'isa/vim-matchit'
 Plug 'lervag/vimtex'
