@@ -109,7 +109,7 @@ call plug#end()
 
 delfunction Cond
 " }}}1
-" # Mappings {{{1
+" Mappings {{{1
 let mapleader = 's'
 let maplocalleader = 's'
 
