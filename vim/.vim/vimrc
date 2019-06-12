@@ -59,10 +59,10 @@ set background=light
 let mapleader = 's'
 let maplocalleader = 's'
 
-nmap <Leader>m :set so=999<cr>
-nmap <Leader><Leader>m :set so=0<cr>
+nmap <Leader>m :set so=999<CR>
+nmap <Leader><Leader>m :set so=0<CR>
 
-nmap <Leader>ev :e $MYVIMRC<cr>
+nmap <Leader>ev :e $MYVIMRC<CR>
 
 nnoremap j gj
 nnoremap k gk
@@ -75,5 +75,10 @@ augroup autosourcing
     autocmd BufWritePost vimrc source %
 augroup END
 
-nnoremap <F5> :GundoToggle<CR>
+" edit files in the same directory
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<CR>
+map <Leader>ew :e %%
+map <Leader>es :sp %%
+map <Leader>ev :vsp %%
+map <Leader>et :tabe %%
 " }}}
