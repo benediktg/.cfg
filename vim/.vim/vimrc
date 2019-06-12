@@ -1,6 +1,3 @@
-" # Default settings {{{1
-runtime defaults.vim
-
 set nocompatible
 set backspace=indent,eol,start
 set encoding=utf-8
@@ -15,9 +12,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-if v:version >= 800
-    set breakindent
-endif
+silent! set breakindent
 set formatoptions+=lor
 set iskeyword-=_
 set nrformats=
@@ -57,7 +52,8 @@ set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
-" }}}1
+
+set background=light
 
 " # Mappings {{{1
 let mapleader = 's'
@@ -81,99 +77,3 @@ augroup END
 
 nnoremap <F5> :GundoToggle<CR>
 " }}}
-
-" # Plugins {{{1
-" automatically install vim-plug {{{
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-" }}}
-
-call plug#begin('~/.vim/plugged')
-
-" Cond function {{{
-function! Cond(cond, ...)
-    let opts = get(a:000, 0, {})
-    return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
-endfunction
-" }}}
-
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-jdaddy'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-
-Plug 'Quramy/vim-js-pretty-template'
-Plug 'ajh17/VimCompletesMe'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'isa/vim-matchit'
-Plug 'junegunn/gv.vim'
-Plug 'lervag/vimtex'
-Plug 'ludovicchabant/vim-gutentags', Cond(v:version >= 800)
-Plug 'mattn/emmet-vim'
-Plug 'neomake/neomake'
-Plug 'sheerun/vim-polyglot'
-Plug 'sjl/gundo.vim'
-Plug 'w0rp/ale'
-Plug 'xero/securemodelines'
-
-Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'do': { -> coc#util#install() } })
-let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
-
-Plug 'NLKNguyen/papercolor-theme'
-
-call plug#end()
-
-colorscheme PaperColor
-set background=light
-" }}}1
-
-" # Plugin settings {{{1
-" Markdown "
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'json']
-let g:markdown_syntax_conceal = 0
-let g:markdown_minlines = 100
-
-" jsonc "
-autocmd FileType json syntax match Comment +\/\/.\+$+
-
-" Rainbow parentheses "
-let g:rainbow_active = 1
-
-" Emmet "
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
-" vimtex "
-let g:tex_flavor = 'latex'
-let g:polyglot_disabled = ['latex']
-let g:vimtex_format_enabled = 1
-
-augroup VimCompletesMeTex
-    autocmd!
-    autocmd FileType tex let b:vcm_omni_pattern = g:vimtex#re#neocomplete
-augroup END
-
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
-" }}}1
-
-" # start server {{{1
-if empty(v:servername) && exists('*remote_startserver')
-    call remote_startserver('VIM')
-endif
-" }}}1
