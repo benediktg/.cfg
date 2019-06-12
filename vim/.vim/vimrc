@@ -1,3 +1,4 @@
+" Default settings {{{1
 runtime defaults.vim
 set nocompatible
 set backspace=indent,eol,start
@@ -53,7 +54,7 @@ set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
-
+" }}}1
 " Plugins {{{1
 " automatically install vim-plug {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -136,6 +137,5 @@ map <Leader>es :sp %%
 map <Leader>ev :vsp %%
 map <Leader>et :tabe %%
 " }}}
-
 colorscheme PaperColor
 set background=light
