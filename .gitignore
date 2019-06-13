@@ -42,3 +42,4 @@ cscope.po.out
 !.vscode/extensions.json
 
 .mypy_cache/
+*/.vim/spell/*.spl
