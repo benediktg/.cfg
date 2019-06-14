@@ -107,8 +107,6 @@ let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
-
-delfunction Cond
 " }}}1
 " Mappings {{{1
 let mapleader = 's'
