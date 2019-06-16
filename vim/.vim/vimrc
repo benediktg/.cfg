@@ -96,6 +96,7 @@ Plug 'lervag/vimtex'
 Plug 'ludovicchabant/vim-gutentags', Cond(v:version >= 800)
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake'
+Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'sjl/gundo.vim'
 Plug 'w0rp/ale'
