@@ -116,8 +116,8 @@ let maplocalleader = ','
 nnoremap <Leader>m :set so=999<CR>
 nnoremap <Leader>M :set so=0<CR>
 
-nnoremap <Leader>Ev :e $MYVIMRC<CR>
-nnoremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <Leader>er :e $MYVIMRC<CR>
+nnoremap <Leader>sr :source $MYVIMRC<CR>
 
 nnoremap <Down> gj
 nnoremap <C-j> gj
@@ -129,10 +129,10 @@ nnoremap + :
 
 " edit files in the same directory
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<CR>
-nnoremap <Leader>ew :e %%
-nnoremap <Leader>es :sp %%
-nnoremap <Leader>ev :vsp %%
-nnoremap <Leader>et :tabe %%
+nmap <Leader>ew :e %%
+nmap <Leader>es :sp %%
+nmap <Leader>ev :vsp %%
+nmap <Leader>et :tabe %%
 " }}}
 colorscheme PaperColor
 set background=light
