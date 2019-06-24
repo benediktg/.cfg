@@ -20,6 +20,7 @@ if string match -qr '^([\'"]).*\1$' -- $LS_COLORS
 end
 
 set -x PATH \
+    $HOME/bin \
     $HOME/.local/bin \
     /snap/bin \
     $GOPATH/bin \
@@ -29,8 +30,7 @@ set -x PATH \
     /usr/bin \
     /usr/sbin \
     /bin \
-    /sbin \
-    $HOME/bin \
+    /sbin
 
 if is_ssh >/dev/null
     set -x FISH_IS_SSH_CONNECTION true
