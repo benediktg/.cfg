@@ -10,7 +10,11 @@ if status is-interactive
 end
 # }}}#
 # environment {{{1
-set -x EDITOR vim
+if type -q -f nvim
+    set -x EDITOR nvim
+else
+    set -x EDITOR vim
+end
 set -x BROWSER firefox
 set -x GCC_COLORS 'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 set -x GOPATH $HOME/.local/go
