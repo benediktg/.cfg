@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set servername (nvr --serverlist | head -n 1)
+nvr --servername $servername $argv
+
+# vim:ft=fish:
