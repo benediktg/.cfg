@@ -85,8 +85,7 @@ helper = cache --timeout=7200
 linenumber = true
 
 [gui]
-fontdiff = -family Hack -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-fontui = -family \"Noto Sans\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+fontui = -family Cantarell -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 spellingdictionary = en
 tabsize = 4
 
