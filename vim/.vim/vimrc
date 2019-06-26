@@ -42,7 +42,8 @@ set wildmode=longest:full,full
 set wildignore+=tags,.*.un~,*.pyc
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico,*.tif
 set wildignore+=*.pdf,*.psd,*.xcf,*.dvi
-set wildignore+=*.aux,*.lof,*.lot,*.fls,*.toc,*.fmt,*.fot,*.cb,*.cb2,.*.lb,*.fdb_latexmk
+set wildignore+=*.aux,*.lof,*.lot,*.fls,*.toc,*.fmt,*.fot,*.cb,*.cb2,.*.lb,*.out
+set wildignore+=*.fdb_latexmk,*.synctex.gz
 set wildignore+=node_modules/*,bower_components/*,site-packages/*
 set lazyredraw
 set splitright
