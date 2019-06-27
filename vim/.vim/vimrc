@@ -138,3 +138,36 @@ nmap <Leader>et :tabe %%
 " }}}
 colorscheme PaperColor
 set background=light
+" Plugin settings {{{1
+" gutentags {{{
+let g:gutentags_cache_dir = '~/.cache/tags'
+let g:gutentags_modules = ['ctags', 'cscope']
+" }}}
+" ctrlp {{{
+let g:ctrlp_show_hidden = 1
+" }}}
+" emmet {{{
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+" }}}
+" markdown {{{
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'json']
+let g:markdown_syntax_conceal = 0
+let g:markdown_minlines = 100
+" }}}
+" nerdcommenter {{{
+let g:NERDSpaceDelims = 1
+" }}}
+" rainbow {{{
+let g:rainbow_active = 1
+" }}}
+" vimtex {{{
+let g:tex_flavor = 'latex'
+let g:polyglot_disabled = ['latex']
+let g:vimtex_format_enabled = 1
+
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+"}}}
+" }}}1
