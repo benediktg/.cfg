@@ -65,8 +65,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " }}}
-" Cond function {{{
-function Cond(cond, ...)
+" Cond1 function {{{
+function! Cond1(cond, ...)
     let opts = get(a:000, 0, {})
     return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
@@ -95,7 +95,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'isa/vim-matchit'
 Plug 'junegunn/gv.vim'
 Plug 'lervag/vimtex'
-Plug 'ludovicchabant/vim-gutentags', Cond(v:version >= 800)
+Plug 'ludovicchabant/vim-gutentags', Cond1(v:version >= 800)
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdcommenter'
@@ -104,7 +104,7 @@ Plug 'sjl/gundo.vim'
 Plug 'w0rp/ale'
 Plug 'xero/securemodelines'
 
-Plug 'neoclide/coc.nvim', Cond(v:version >= 800, { 'do': { -> coc#util#install() } })
+Plug 'neoclide/coc.nvim', Cond1(v:version >= 800, { 'do': { -> coc#util#install() } })
 let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 
 Plug 'NLKNguyen/papercolor-theme'
@@ -139,12 +139,12 @@ nmap <Leader>et :tabe %%
 colorscheme PaperColor
 set background=light
 " Plugin settings {{{1
+" ctrlp {{{
+let g:ctrlp_show_hidden = 1
+" }}}
 " gutentags {{{
 let g:gutentags_cache_dir = '~/.cache/tags'
 let g:gutentags_modules = ['ctags', 'cscope']
-" }}}
-" ctrlp {{{
-let g:ctrlp_show_hidden = 1
 " }}}
 " emmet {{{
 let g:user_emmet_install_global = 0
