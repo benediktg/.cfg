@@ -1,146 +1,147 @@
 [advice]
-detachedhead = false
+    detachedhead = false
 
 [alias]
-ai = add --interactive
-ap = add --patch
-b = branch
-c = commit
-ca = commit --all
-cas = commit --all --gpg-sign --signoff
-co = checkout
-cob = checkout -b
-cp = cherry-pick
-cpa = cherry-pick --abort
-cpc = cherry-pick --continue
-cs = commit --gpg-sign --signoff
-cu = !git branch --merged | grep -v '\\*' | grep -v master | xargs -n 1 git branch -d
-currentbranch = rev-parse --abbrev-ref HEAD
-d = diff
-dc = diff --cached
-dh = diff HEAD~ HEAD
-dp = diff --patch --patience
-ds = diff --staged
-em = config --global user.email
-eml = config user.email
-f = fetch --tags --prune
-fa = fetch --all --tags --prune
-fr = fetch --tags --prune --recurse-submodules
-k = !gitk
-ka = !gitk --all
-l = log
-lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-logn = !git lg | head -n
-lp = log --patch
-m = merge --no-ff
-ma = merge --abort
-master = checkout master
-mend = commit --amend
-mt = mergetool
-nm = config --global user.name
-nml = config user.name
-patch = !git --no-pager diff --no-color
-pf = push --force-with-lease
-pl = pull
-ps = push
-pso = push origin :
-r = remote
-rb = rebase
-rba = rebase --abort
-rbc = rebase --continue
-rbi = rebase --interactive
-rbm = rebase --onto=master
-rbo = rebase --onto
-rbom = rebase --onto=master master
-rbs = rebase --skip
-reha = reset --hard
-rh = reset --hard
-rs = reset --soft
-rt = reset
-rv = remote --verbose
-s = show
-sb = show-branch
-sh = stash
-shp = stash show -p
-sm = submodule
-st = status
-t = !tig
-ta = !tig --all
-ui = gui
+    ai = add --interactive
+    ap = add --patch
+    b = branch
+    c = commit
+    ca = commit --all
+    cas = commit --all --gpg-sign --signoff
+    co = checkout
+    cob = checkout -b
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    cs = commit --gpg-sign --signoff
+    cu = !git branch --merged | grep -v '\\*' | grep -v master | xargs -n 1 git branch -d
+    currentbranch = rev-parse --abbrev-ref HEAD
+    d = diff
+    dc = diff --cached
+    dh = diff HEAD~ HEAD
+    dp = diff --patch --patience
+    ds = diff --staged
+    em = config --global user.email
+    eml = config user.email
+    f = fetch --tags --prune
+    fa = fetch --all --tags --prune
+    fr = fetch --tags --prune --recurse-submodules
+    k = !gitk
+    ka = !gitk --all
+    l = log
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    logn = !git lg | head -n
+    lp = log --patch
+    m = merge --no-ff
+    ma = merge --abort
+    master = checkout master
+    mend = commit --amend
+    mt = mergetool
+    nm = config --global user.name
+    nml = config user.name
+    patch = !git --no-pager diff --no-color
+    pf = push --force-with-lease
+    pl = pull
+    ps = push
+    pso = push origin :
+    r = remote
+    rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbm = rebase --onto=master
+    rbo = rebase --onto
+    rbom = rebase --onto=master master
+    rbs = rebase --skip
+    reha = reset --hard
+    rh = reset --hard
+    rs = reset --soft
+    rt = reset
+    rv = remote --verbose
+    s = show
+    sb = show-branch
+    sh = stash
+    shp = stash show -p
+    sm = submodule
+    st = status
+    t = !tig
+    ta = !tig --all
+    ui = gui
 
 [color]
-ui = auto
+    ui = auto
 
 [core]
-excludesfile = ~/.config/git/excludes
-pager = diff-so-fancy | less --tabs=4 -RFX
+    excludesfile = ~/.config/git/excludes
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 [credential]
-helper = cache --timeout=7200
+    helper = cache --timeout=7200
 
 [diff]
 #tool = code
 
 [grep]
-linenumber = true
+    linenumber = true
 
 [gui]
-fontui = -family Cantarell -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-spellingdictionary = en
-tabsize = 4
+    fontui = -family Cantarell -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+    spellingdictionary = none
+    tabsize = 4
+    fontdiff = -family \"DejaVu Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
 [merge]
-keepbackup = false
-tool = code
+    keepbackup = false
+    tool = nvim -d
 
 [mergetool]
-keepbackup = false
+    keepbackup = false
 
 [pack]
-depth = 250
-threads = 2
-window = 250
-windowmemory = 1073741824
+    depth = 250
+    threads = 2
+    window = 250
+    windowmemory = 1073741824
 
 [pull]
-ff = only
+    ff = only
 
 [push]
-default = simple
+    default = simple
 
 [rebase]
-autosquash = true
-stat = true
+    autosquash = true
+    stat = true
 
 [rerere]
-autoupdate = true
-enable = true
+    autoupdate = true
+    enable = true
 
 [submodule]
-recurse = true
+    recurse = true
 
 [url "git@github.com:"]
-insteadof = gh:
+    insteadof = gh:
 
 [url "git@gitlab.com:"]
-insteadof = gl:
+    insteadof = gl:
 
 [url "git@git.g5r.eu:"]
-insteadof = gg:
+    insteadof = gg:
 
 [url "git://anongit.kde.org/"]
-insteadof = kde:
+    insteadof = kde:
 
 [url "git@git.kde.org:"]
-pushinsteadof = kde:
+    pushinsteadof = kde:
 
 [user]
-email = benedikt@g5r.eu
-name = Benedikt Geißler
-signingkey = 8A46815E3386097F
+    email = benedikt@g5r.eu
+    name = Benedikt Geißler
+    signingkey = 8A46815E3386097F
 
 [includeIf "gitdir:~/Projekte/urz/"]
-path = ~/.dotfiles/conf/git/urz.ini
+    path = ~/.dotfiles/conf/git/urz.ini
 
 [includeIf "gitdir:~/Projekte/fsfe/"]
-path = ~/.dotfiles/conf/git/fsfe.ini
+    path = ~/.dotfiles/conf/git/fsfe.ini
