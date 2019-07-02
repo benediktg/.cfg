@@ -5,9 +5,6 @@ all: stow
 stow:
 	@stow -t ~ -S base bin fish git vim
 	fish -c install-diff-so-fancy
-	@echo "Run the following tasks:"
-	@echo fish -c install-fundle
-	@echo fish -c install-vim-plug
 
 
 .PHONY: desktop
