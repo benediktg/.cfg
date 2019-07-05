@@ -29,6 +29,8 @@ function universal-variables-setup
         $HOME/.cargo/bin
     # }}}1
     # prompt settings {{{1
+    set -U fish_greeting
+
     set -U __fish_git_prompt_color_branch yellow
     set -U __fish_git_prompt_showdirtystate yes
     set -U __fish_git_prompt_showstashstate yes
