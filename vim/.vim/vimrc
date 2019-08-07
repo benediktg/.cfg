@@ -95,7 +95,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'isa/vim-matchit'
 Plug 'junegunn/gv.vim'
 Plug 'lervag/vimtex'
-Plug 'ludovicchabant/vim-gutentags', Cond1(v:version >= 800)
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdcommenter'
@@ -103,9 +102,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'sjl/gundo.vim'
 Plug 'w0rp/ale'
 Plug 'xero/securemodelines'
-
-Plug 'neoclide/coc.nvim', Cond1(v:version >= 800, { 'do': { -> coc#util#install() } })
-let g:coc_global_extensions = ['coc-json', 'coc-vimtex']
 
 Plug 'NLKNguyen/papercolor-theme'
 
