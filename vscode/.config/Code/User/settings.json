@@ -22,8 +22,12 @@
     "editor.minimap.enabled": false,
     "editor.quickSuggestionsDelay": 0,
     "editor.renderWhitespace": "selection",
-    "editor.rulers": [80, 99],
+    "editor.rulers": [
+        80,
+        99
+    ],
     "editor.smoothScrolling": false,
+    "editor.suggestSelection": "first",
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "deepIndent",
@@ -69,7 +73,9 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "npm-intellisense.importLinebreak": "\n",
     "prettier.eslintIntegration": true,
-    "projectManager.git.baseFolders": ["$home/Projekte"],
+    "projectManager.git.baseFolders": [
+        "$home/Projekte"
+    ],
     "python.jediEnabled": false,
     "python.linting.banditEnabled": true,
     "python.linting.flake8Enabled": true,
@@ -84,12 +90,13 @@
     "terminal.integrated.cursorBlinking": true,
     "vim.leader": ",",
     "vim.useSystemClipboard": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "default",
     "window.restoreFullscreen": true,
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "PaperColor Redux",
+    "workbench.colorTheme": "Night Owl Light",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.startupEditor": "none"
