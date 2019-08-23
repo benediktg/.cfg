@@ -18,9 +18,9 @@ EditorConfig.EditorConfig
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 felixfbecker.php-debug
+firefox-devtools.vscode-firefox-debug
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-hbenl.vscode-firefox-debug
 James-Yu.latex-workshop
 konstantin.wrapSelection
 lunaryorn.fish-ide
@@ -41,7 +41,6 @@ sdras.night-owl
 shinnn.stylelint
 skyapps.fish-vscode
 VisualStudioExptTeam.vscodeintellicode
-vscodevim.vim
 vscoss.vscode-ansible
 WakaTime.vscode-wakatime
 webreflection.literally-html

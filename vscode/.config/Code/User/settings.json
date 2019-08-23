@@ -3,7 +3,6 @@
         "editor.acceptSuggestionOnEnter": "off",
         "editor.parameterHints.enabled": false,
         "editor.quickSuggestions": false,
-        "editor.renderWhitespace": "all",
         "editor.snippetSuggestions": "none"
     },
     "breadcrumbs.enabled": true,
@@ -30,7 +29,6 @@
     "editor.suggestSelection": "first",
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 120,
-    "editor.wrappingIndent": "deepIndent",
     "emmet.includeLanguages": {
         "django-html": "html",
         "javascript": "javascriptreact",
@@ -88,8 +86,7 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.cursorBlinking": true,
-    "vim.leader": ",",
-    "vim.useSystemClipboard": true,
+    "terminal.integrated.shell.linux": "fish",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "default",
@@ -99,5 +96,6 @@
     "workbench.colorTheme": "Night Owl Light",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
+    "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none"
 }

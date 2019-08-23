@@ -79,7 +79,10 @@
     helper = cache --timeout=7200
 
 [diff]
-#tool = code
+    tool = default-difftool
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 [grep]
     linenumber = true
