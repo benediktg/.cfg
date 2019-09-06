@@ -70,7 +70,7 @@
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
     "npm-intellisense.importLinebreak": "\n",
-    "prettier.eslintIntegration": true,
+    "prettier.requireConfig": true,
     "projectManager.git.baseFolders": [
         "$home/Projekte"
     ],
@@ -86,7 +86,6 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.shell.linux": "fish",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "default",
