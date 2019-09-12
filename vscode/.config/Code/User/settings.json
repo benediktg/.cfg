@@ -67,6 +67,13 @@
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
     "javascript.implicitProjectConfig.checkJs": true,
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-m",
+        "-y=\"defaultIndent: '%INDENT%',modifyLineBreaks:textWrapOptions:columns: 120\""
+    ],
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
     "npm-intellisense.importLinebreak": "\n",
