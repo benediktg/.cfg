@@ -74,6 +74,7 @@
 [core]
     excludesfile = ~/.config/git/excludes
     pager = diff-so-fancy | less --tabs=4 -RFX
+	autocrlf = true
 
 [credential]
     helper = cache --timeout=7200
@@ -148,3 +149,5 @@
 
 [includeIf "gitdir:~/Projekte/fsfe/"]
     path = ~/.dotfiles/conf/git/fsfe.ini
+[diff-so-fancy]
+	markEmptyLines = false
