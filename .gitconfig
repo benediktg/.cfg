@@ -1,0 +1,120 @@
+[user]
+    email = mail@benediktgeissler.de
+    name = Benedikt Geißler
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitexcludes
+
+[alias]
+    ai = add --interactive
+    ap = add --patch
+    b = branch
+    c = commit
+    ca = commit --all
+    cas = commit --all --gpg-sign --signoff
+    co = checkout
+    cob = checkout -b
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    cs = commit --gpg-sign --signoff
+    cu = !git branch --merged | grep -v '\\*' | grep -v master | xargs -n 1 git branch -d
+    currentbranch = rev-parse --abbrev-ref HEAD
+    d = diff
+    dc = diff --cached
+    dh = diff HEAD~ HEAD
+    dp = diff --patch --patience
+    ds = diff --staged
+    em = config --global user.email
+    eml = config user.email
+    f = fetch --tags --prune
+    fa = fetch --all --tags --prune
+    fr = fetch --tags --prune --recurse-submodules
+    k = !gitk
+    ka = !gitk --all
+    l = log
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    logn = !git lg | head -n
+    lp = log --patch
+    m = merge --no-ff
+    ma = merge --abort
+    master = checkout master
+    main = checkout main
+    mend = commit --amend
+    mt = mergetool
+    nm = config --global user.name
+    nml = config user.name
+    patch = !git --no-pager diff --no-color
+    pf = push --force-with-lease
+    pl = pull
+    ps = push
+    pso = push origin :
+    r = remote
+    rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbm = rebase --onto=master
+    rbo = rebase --onto
+    rbom = rebase --onto=master master
+    rbs = rebase --skip
+    reha = reset --hard
+    rh = reset --hard
+    rs = reset --soft
+    rt = reset
+    rv = remote --verbose
+    s = show
+    sb = show-branch
+    sh = stash
+    shp = stash show -p
+    sm = submodule
+    st = status
+    t = !tig
+    ta = !tig --all
+    ui = gui
+
+[color]
+    ui = auto
+
+[credential]
+    helper = /usr/lib/git-core/git-credential-libsecret
+
+[advice]
+    detachedhead = false
+
+[grep]
+    linenumber = true
+
+[gui]
+    spellingdictionary = none
+    tabsize = 4
+
+[merge]
+    keepbackup = false
+
+[mergetool]
+    keepbackup = false
+
+[pack]
+    depth = 250
+    threads = 2
+    window = 250
+    windowmemory = 1073741824
+
+[pull]
+    ff = only
+
+[push]
+    default = simple
+
+[rebase]
+    autosquash = true
+    stat = true
+
+[rerere]
+    autoupdate = true
+    enable = true
+
+[submodule]
+    recurse = true

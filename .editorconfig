@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 90
+quote_type = single
+spaces_around_operators = true
+trim_trailing_whitespace = true
+
+
+[Makefile]
+indent_style = tab
+
+[*.{html,tex,jsx,tsx,yml,yaml,md}]
+indent_size = 2
+
+[package.json]
+indent_size = 2
