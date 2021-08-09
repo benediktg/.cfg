@@ -1,3 +1,3 @@
-function vi --wraps=vim --description 'alias vi vim'
-  vim $argv; 
+function vi --wraps=vim --description 'vim'
+    vim $argv; 
 end
