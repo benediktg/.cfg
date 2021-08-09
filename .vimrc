@@ -82,3 +82,9 @@ nmap <Leader>es :sp %%
 nmap <Leader>ev :vsp %%
 nmap <Leader>et :tabe %%
 " }}}
+" enable local vimrc {{{1
+let $LOCALFILE=expand("~/.vimrc_local")
+if filereadable($LOCALFILE)
+    source $LOCALFILE
+endif
+" }}}

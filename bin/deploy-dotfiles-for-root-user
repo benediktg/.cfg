@@ -1,9 +1,15 @@
 #!/usr/bin/fish
 
 function apply
-    for dir in $argv
-        sudo cp -RP --preserve=links,mode,timestamps --reflink=auto ~/$dir/. /root/$dir
+    for item in $argv
+        if test -d $item
+            sudo cp -RP --preserve=links,mode,timestamps --reflink=auto ~/$item/. /root/$item
+        else
+            sudo cp -P --preserve=links,mode,timestamps --reflink=auto ~/$item /root/$item
+        end
     end
 end
 
-apply .config/fish
+apply \
+    .config/fish \
+    .vimrc

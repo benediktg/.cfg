@@ -118,3 +118,6 @@
 
 [submodule]
     recurse = true
+
+[include]
+    path = ~/.gitconfig_local
