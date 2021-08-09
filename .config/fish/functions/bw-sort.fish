@@ -1,3 +1,4 @@
+#!/usr/bin/fish
 function bw-sort
     bw list items | jq -r '
         map(. + { e: (.revisionDate | sub(".[0-9]+Z$"; "Z") |
