@@ -1,0 +1,9 @@
+#!/usr/bin/fish
+
+function apply
+    for dir in $argv
+        sudo cp -RP --preserve=links,mode,timestamps --reflink=auto ~/$dir/. /root/$dir
+    end
+end
+
+apply .config/fish
