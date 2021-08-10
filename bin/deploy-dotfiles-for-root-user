@@ -12,4 +12,5 @@ end
 
 apply \
     .config/fish \
-    .vimrc
+    .vimrc \
+    .vim

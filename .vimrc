@@ -57,6 +57,10 @@ set ignorecase
 set smartcase
 set nohlsearch
 " }}}1
+" Theme settings {{{1
+set background=light
+colorscheme PaperColor
+" }}}
 " Mappings {{{1
 let mapleader = 's'
 let maplocalleader = ','
