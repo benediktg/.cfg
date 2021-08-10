@@ -1,4 +1,3 @@
-#!/usr/bin/fish
 function prepend-lines-to-file
     test -f $argv[-1] || return 1
     set temp (mktemp)

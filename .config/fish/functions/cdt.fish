@@ -1,4 +1,3 @@
-#!/usr/bin/fish
 function cdt
-  cd (mktemp -d)
+    cd (mktemp -d)
 end

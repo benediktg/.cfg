@@ -1,6 +1,5 @@
-#!/usr/bin/fish
 function r_create-subvolume
-    fish_is_root_user || begin; echo "kein root"; return 1; end 
+    fish_is_root_user || begin; echo "kein root"; return 1; end
     set location (realpath $argv[1])
     set owner (stat -c '%U:%G' $location)
     set backup "$location._"
