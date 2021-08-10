@@ -14,4 +14,5 @@ apply \
     .config/fish \
     .vimrc \
     .vim \
-    .config/nvim
+    .config/nvim \
+    .editorconfig
