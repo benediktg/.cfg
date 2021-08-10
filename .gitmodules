@@ -1,0 +1,15 @@
+[submodule ".vim/pack/plugins/start/securemodelines"]
+	path = .vim/pack/plugins/start/securemodelines
+	url = https://github.com/xero/securemodelines
+[submodule ".vim/pack/plugins/start/editorconfig"]
+	path = .vim/pack/plugins/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule ".vim/pack/plugins/start/polyglot"]
+	path = .vim/pack/plugins/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/plugins/start/sensible"]
+	path = .vim/pack/plugins/start/sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule ".vim/pack/plugins/start/surround"]
+	path = .vim/pack/plugins/start/surround
+	url = https://github.com/tpope/vim-surround
