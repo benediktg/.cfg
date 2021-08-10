@@ -13,4 +13,5 @@ end
 apply \
     .config/fish \
     .vimrc \
-    .vim
+    .vim \
+    .config/nvim
