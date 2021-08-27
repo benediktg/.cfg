@@ -6,14 +6,5 @@ function config
    /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME $argv
 end
 
-mkdir -p $HOME/.config-backup
-config checkout
-if test $status -ne 0
-    echo "Backing up pre-existing dot files."
-    config checkout 2>&1 |\
-        egrep "\s+\." |\
-        awk {'print $2'} |\
-        xargs -I{} mv {} $HOME/.config-backup/{}
-    config checkout
-end
+config checkout -f
 config config status.showUntrackedFiles no
