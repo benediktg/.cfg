@@ -1,4 +1,13 @@
 function fish_prompt --description 'Prompt ausgeben'
+    fish_check_current_version
+    or begin
+        function __fish_print_pipestatus; end
+        function prompt_login
+            echo -n -s "$USER@$HOSTNAME"
+        end
+        function fish_vcs_prompt; __fish_git_prompt; end
+    end
+
     set -l last_pipestatus $pipestatus
     set -lx __fish_last_status $status # Export for __fish_print_pipestatus.
     set -l normal (set_color normal)
