@@ -1,1 +1,1 @@
-test -f ~/.local.fish && source ~/.local.fish
+test -f ~/.local.fish; and source ~/.local.fish
