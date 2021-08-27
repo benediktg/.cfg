@@ -1,10 +1,10 @@
 #!/usr/bin/fish
 
 test -d $HOME/.cfg
-or git clone --bare --recursive -j4 git@github.com:benediktg/.cfg.git $HOME/.cfg
+or git clone --bare git@github.com:benediktg/.cfg.git $HOME/.cfg
 
 function config
-   /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME $argv
+    /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME $argv
 end
 
 config checkout -f
