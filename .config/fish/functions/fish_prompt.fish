@@ -3,7 +3,7 @@ function fish_prompt --description 'Prompt ausgeben'
     or begin
         function __fish_print_pipestatus; end
         function prompt_login
-            echo -n -s "$USER@$HOSTNAME"
+            echo -n -s "$USER@"(hostname)
         end
         function fish_vcs_prompt; __fish_git_prompt; end
     end
