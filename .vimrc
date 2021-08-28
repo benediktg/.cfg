@@ -58,7 +58,7 @@ set smartcase
 set nohlsearch
 " }}}1
 " Theme settings {{{1
-set background=light
+set background=dark
 colorscheme PaperColor
 " }}}
 " Mappings {{{1
