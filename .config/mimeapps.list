@@ -1,0 +1,9 @@
+[Default Applications]
+application/pdf=org.gnome.Evince.desktop;
+x-scheme-handler/mailto=org.gnome.Geary.desktop
+
+[Added Associations]
+application/octet-stream=org.gnome.gedit.desktop;
+application/vnd.debian.binary-package=gdebi.desktop;
+application/pdf=org.gnome.Evince.desktop;
+x-scheme-handler/mailto=org.gnome.Geary.desktop;
