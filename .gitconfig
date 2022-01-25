@@ -116,8 +116,8 @@
     autoupdate = true
     enable = true
 
-[submodule]
-    recurse = true
+[status]
+	submoduleSummary = true
 
 [include]
     path = ~/.gitconfig_local
