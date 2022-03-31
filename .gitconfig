@@ -90,6 +90,9 @@
     spellingdictionary = none
     tabsize = 4
 
+[init]
+    defaultBranch = main
+
 [merge]
     keepbackup = false
 
