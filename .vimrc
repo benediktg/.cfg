@@ -5,7 +5,7 @@ set backspace=indent,eol,start
 set encoding=utf-8
 set ffs=unix,dos,mac
 
-" Einrückung, Tabulator "
+" Einrückung, Tabulator
 filetype plugin indent on
 syntax on
 set autoindent
@@ -21,9 +21,8 @@ set nrformats=
 set lbr
 set showbreak=**\ \
 
-" Bedienung "
+" Bedienung
 set number
-"set relativenumber
 set cursorline
 set showmode
 set showcmd
@@ -51,14 +50,27 @@ set splitbelow
 set hidden
 set foldmethod=marker
 
-" Suche "
+" Suche
 set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
 " }}}1
 " Theme settings {{{1
-set background=light
+" helper function for auto dark mode {{{2
+function GetGnomeAppearance()
+    let theme = system('gsettings get org.gnome.desktop.interface gtk-theme')
+    let light = 'Adwaita'
+    let dark = 'Adwaita-dark'
+    if theme == light
+        return 'light'
+    elseif theme == dark
+        return 'dark'
+    endif
+    return 'dark'
+endfunction
+" }}}
+let &background = GetGnomeAppearance()
 colorscheme PaperColor
 " }}}
 " Mappings {{{1
@@ -87,8 +99,8 @@ nmap <Leader>ev :vsp %%
 nmap <Leader>et :tabe %%
 " }}}
 " enable local vimrc {{{1
-let $LOCALFILE=expand("~/.vimrc_local")
-if filereadable($LOCALFILE)
-    source $LOCALFILE
+let localfile = expand('~/.vimrc_local')
+if filereadable(localfile)
+    source localfile
 endif
 " }}}
