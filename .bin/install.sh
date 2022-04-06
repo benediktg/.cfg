@@ -1,10 +1,6 @@
 #!/bin/bash
-set -e
-set -o pipefail
-set -u
-set -x
+set -eux
 
-test -d "$HOME/.cfg" || git clone --bare git@github.com:benediktg/.cfg.git "$HOME/.cfg"
-alias config='git --git-dir="$HOME/.cfg" --work-tree="$HOME"'
-config checkout -f
-config config status.showUntrackedFiles no
+test -d ~/.cfg || git clone --bare git@github.com:benediktg/.cfg.git ~/.cfg
+git --git-dir="$HOME/.cfg" --work-tree="$HOME" checkout -f
+git --git-dir="$HOME/.cfg" --work-tree="$HOME" config status.showUntrackedFiles no
