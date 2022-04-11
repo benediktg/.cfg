@@ -60,8 +60,8 @@ set nohlsearch
 " helper function for auto dark mode {{{2
 function GetGnomeAppearance()
     let theme = system('gsettings get org.gnome.desktop.interface gtk-theme')
-    let light = 'Adwaita'
-    let dark = 'Adwaita-dark'
+    let light = "'Adwaita'\n"
+    let dark = "'Adwaita-dark'\n"
     if theme == light
         return 'light'
     elseif theme == dark
