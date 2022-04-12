@@ -1,10 +1,5 @@
-[user]
-    email = mail@benediktgeissler.de
-    name = Benedikt Geißler
-
-[core]
-    editor = vim
-    excludesfile = ~/.gitexcludes
+[advice]
+    detachedhead = false
 
 [alias]
     ai = add --interactive
@@ -77,11 +72,19 @@
 [color]
     ui = auto
 
+[core]
+    editor = vim
+    excludesfile = ~/.gitexcludes
+    pager = delta
+
 [credential]
     helper = /usr/lib/git-core/git-credential-libsecret
 
-[advice]
-    detachedhead = false
+[delta]
+    navigate = true  # use n and N to move between diff sections
+
+[diff]
+    colorMoved = default
 
 [grep]
     linenumber = true
@@ -93,7 +96,11 @@
 [init]
     defaultBranch = main
 
+[interactive]
+    diffFilter = delta --color-only
+
 [merge]
+    conflictstyle = diff3
     keepbackup = false
 
 [mergetool]
@@ -121,6 +128,10 @@
 
 [status]
 	submoduleSummary = true
+
+[user]
+    email = mail@benediktgeissler.de
+    name = Benedikt Geißler
 
 [include]
     path = ~/.gitconfig_local
