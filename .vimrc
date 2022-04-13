@@ -57,21 +57,12 @@ set smartcase
 set nohlsearch
 " }}}1
 " Theme settings {{{1
-" helper function for auto dark mode {{{2
-function GetGnomeAppearance()
-    let theme = system('gsettings get org.gnome.desktop.interface gtk-theme')
-    let light = "'Adwaita'\n"
-    let dark = "'Adwaita-dark'\n"
-    if theme == light
-        return 'light'
-    elseif theme == dark
-        return 'dark'
-    endif
-    return 'dark'
-endfunction
-" }}}
-let &background = GetGnomeAppearance()
 colorscheme PaperColor
+if $GNOME_APPEARANCE == 'light'
+    set background=light
+else
+    set background=dark
+endif
 " }}}
 " Mappings {{{1
 let mapleader = 's'
